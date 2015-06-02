@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+
+	<parameter name="randomSeed" displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
+
+	<parameter name="nAgents" displayName="nAgent" type="int" defaultValue="50" />
+	
+	<parameter name="transmissionType" displayName="transmissionType" type="String" defaultValue="prestige" />
+		
+	<parameter name="nTraits" displayName="nTraits" type="int" defaultValue="3" />
+	
+	<parameter name="traitRange" displayName="traitRange" type="int" defaultValue="5" />
+	
+	<parameter name="xDim" displayName="xDim" type="int" 
+						defaultValue="10" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+	<parameter name="yDim" displayName="yDim" type="int" 
+						defaultValue="10" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		
+		<parameter name="timeStep" displayName="timeStep" type="int" 
+						defaultValue="5000" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		<parameter name="innovationRate" displayName="innovationRate" type="double" 
+						defaultValue="0.01" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+		
+		<parameter name="interactionRadius" displayName="interactionRadius" type="double" 
+						defaultValue="1" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		<parameter name="moveDistance" displayName="interactionRadius" type="double" 
+						defaultValue="1" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+		
+		<parameter name="replacementRate" displayName="replacementRate" type="double" 
+						defaultValue="0.1" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+		
+			<parameter name="prestigeIndex" displayName="prestigeIndex " type="int" 
+						defaultValue="0" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+
+</parameters>
