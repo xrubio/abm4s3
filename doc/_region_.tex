@@ -1,10 +1,13 @@
-\documentclass[11pt,a4paper,twocolumn,notitlepage]{article}
+\message{ !name(odd_decision_making.tex)}\documentclass[11pt,a4paper,twocolumn,notitlepage]{article}
 
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{hyperref}
 
 \begin{document}
+
+\message{ !name(odd_decision_making.tex) !offset(-3) }
+
 
 \title{ODD for the decision-making model}
 \author{Xavier Rubio-Campillo \and Mark Altaweel \and C. Michael Barton \and Enrico R. Crema}
@@ -44,15 +47,15 @@ The order of agents' execution is shuffled every time step, and each phase is si
 
 \subsection{Basic principles}
 
-The basic principles for this model are agents exist in a landscape of cells whereby they attempt to obtain resources from these cells. Cell resources grow at constant states, while agents are able to view some distance within a space and can move to areas where they seem benefit in consuming resources from cells.
+No idea
 
 \subsection{Emergence}
 
-Tragedy of the commons will emerge from the system if all agents have access to the same environmental information (i.e. high $radius$ values). In other words, agents are likely to over consume if they see the entire space or simulated region.
+Tragedy of the commons will emerge from the system if all agents have access to the same environmental information (i.e. high $radius$ values).
 
 \subsection{Adaptation}
 
-Agents do not adapt.
+No
 
 \subsection{Objectives}
 
@@ -60,15 +63,13 @@ The objective of each agent is to collect the highest value of $resources$ per t
 
 \subsection{Learning}
 
-Agents do not learn.
+No
 
 \subsection{Prediction}
 
-Agents do not predict.
+No
 
 \subsection{Sensing}
-
-Agents sense  $resources$ and require $energy$ to live and reproduce.
 
 \subsection{Interaction}
 
@@ -80,15 +81,13 @@ The only stochastic sources are the order of execution of agents and the choice 
 
 \subsection{Collectives}
 
-Agent operate independently. 
+No idea
 
 \subsection{Observation}
 
 Population size is the summary statistic chosen to analyse the outcome of the model.
 
 \section{Initialization}
-
-These are provided in the main text and in the model input files included in each model. A parameter sweep is applied to a search radius for cell resources, whereby this parameter is varied for agents.
 
 \subsection{Agents}
 
@@ -100,7 +99,7 @@ The value of $maxResources$ of each cell is sampled from a uniform distribution 
 
 \section{Input data}
 
-The model uses data files, which are included in the git repository for the models.
+No
 
 \section{Submodels}
 
@@ -126,3 +125,5 @@ The $resources$ of each cell will increase every time step by the parameter $res
 
 \end{document}
 
+
+\message{ !name(odd_decision_making.tex) !offset(-129) }

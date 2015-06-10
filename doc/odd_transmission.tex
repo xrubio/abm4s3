@@ -42,7 +42,7 @@ The order of agents' execution is shuffled every time step, and each phase is si
 
 \subsection{Basic principles}
 
-The array of cultural traits follows the classical model of Axelrod. Transmission mechanisms have been implemented based on the literature cited in the paper.
+The array of cultural traits follows the classical model of Axelrod's 1997 dissemination of culture. Transmission mechanisms have been implemented based on the literature cited in the paper.
 
 \subsection{Emergence}
 
@@ -50,35 +50,35 @@ The interaction of the agents follow 4 basic social learning system (vertical, u
 
 \subsection{Adaptation}
 
-No
+There is no adaptation.
 
 \subsection{Objectives}
 
-Our agents do not have any objective...
+There are no agent objectives.
 
 \subsection{Learning}
 
-No
+There is no learning.
 
 \subsection{Prediction}
 
-No
+There is no prediction.
 
 \subsection{Sensing}
 
-No
+There is no agent sensing.
 
 \subsection{Interaction}
 
-Agents copy cultural traits of the other agents following one of the four cultural transmission modes. 
+Agents copy cultural traits of the other agents following one of the four cultural transmission modes listed above. This leads to different types of populations and traits. 
 
 \subsection{Stochasticity}
 
-The innovation mechanism and the different transmission modes contain stochasticity in the probability of copy/innovate for a particular trait. 
+The innovation mechanism and the different transmission modes, where cultural genes are changed based on probability, contain stochasticity in the probability of copy/innovate for a particular trait. 
 
 \subsection{Collectives}
 
-No idea
+Collectives affect agents whereby agents with specific cultural attributes will likely affect other agents that do not have those attributes.
 
 \subsection{Observation}
 
@@ -90,6 +90,8 @@ being $C$ the set of possible traits defined by $nTraitRange$, $t$ the number of
 
 \section{Initialization}
 
+A parameter sweep is applied in the four scenarios and using specific parameters varied as referenced in the paper.
+
 \subsection{Agents}
 
 This model is populated by $nAgents$ located at random spatial coordinates. Each of the traits in their cultural vector $traitRange$ is randomly chosen from the values in $traitRange$.
@@ -100,7 +102,7 @@ The value of $maxResources$ of each cell is sampled from a uniform distribution 
 
 \section{Input data}
 
-No
+There are text input files in the models' git repository. 
 
 \section{Submodels}
 
