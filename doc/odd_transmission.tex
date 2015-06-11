@@ -13,14 +13,13 @@
 
 \section{Purpose}
 
-This model illustrates how theoretical models of social learning strategies can easily be translated into an ABM, by exploring how different modes of transmission combined with different population sizes can affect cultural diversity.
+This model illustrates how theoretical models of social learning strategies \citep{boyd1985,henrich_mcelreath2003,laland2004,mesoudi_2011} can easily be translated into an ABM, by exploring how different modes of transmission combined with different population sizes can affect cultural diversity.
 
-TODO: reference paper?
 
 \section{Entities, state variables, and scales}
 \subsection{Agents}
 
-Each agent is described by its spatial location $x,y$ and an array composed by $nTraits$ “slots” that can be one of the values defined by the vector $traitRange$. For example if $nTraits=3$ and $traitRange=\{0,1,2,3,4\}$, an agent can have traits $\{0,2,0\}$ while another one might have $\{0,1,1\}$. This array of numbers represent the cultural traits possessed by each agent. Thus in the example just given, the two agent share the same cultural trait (the number $0$) in the first slot.
+Each agent is described by its spatial location $x,y$ and an array composed by $nTraits$ slots that can be one of the values defined by the vector $traitRange$. For example if $nTraits=3$ and $traitRange=\{0,1,2,3,4\}$, an agent can have traits $\{0,2,0\}$ while another one might have $\{0,1,1\}$. This array of numbers represent the cultural traits possessed by each agent. Thus in the example just given, the two agent share the same cultural trait (the number $0$) in the first slot.
 
 \subsection{Environment}
 
@@ -42,7 +41,7 @@ The order of agents' execution is shuffled every time step, and each phase is si
 
 \subsection{Basic principles}
 
-The array of cultural traits follows the classical model of Axelrod's 1997 dissemination of culture. Transmission mechanisms have been implemented based on the literature cited in the paper.
+The array of cultural traits follows the classical model of Axelrod's dissemination of culture \citep{axelrod_1997}. Transmission mechanisms have been implemented based on the literature cited in the paper.
 
 \subsection{Emergence}
 
@@ -66,7 +65,7 @@ There is no prediction.
 
 \subsection{Sensing}
 
-There is no agent sensing.
+The agent engage into social learning only with individuals located within an euclidean distance $interactionRadius$.
 
 \subsection{Interaction}
 
@@ -78,15 +77,17 @@ The innovation mechanism and the different transmission modes, where cultural ge
 
 \subsection{Collectives}
 
-Collectives affect agents whereby agents with specific cultural attributes will likely affect other agents that do not have those attributes.
+Collectives affect agents whereby agents with specific cultural attributes will likely affect other agents that do not have those attributes. %Not sure if I got the first part of this sentence.
 
 \subsection{Observation}
 
-We measure the diversity of the system based on Simpson's index of diversity $D$:
+We measure cultural diversity using Simpson's index of diversity $D$:
 
-$D = 1 - \sum\limits_{c=1}^C{(\frac{t}{T})^2}$
+\begin{equation}
+D = 1 - \sum\limits_{i=1}^C{\left(\frac{n_i}{N}\right)^2}
+\end{equation}
 
-being $C$ the set of possible traits defined by $nTraitRange$, $t$ the number of times a trait $c$ is present in the population of agents, and $T$ the total number of traits.
+where $C$ is the total number of possible combination of traits defined by $nTraitRange$ and $nTraits$ (equivalent to the length of the vector $nTraitRange$ elevated by $nTraits$), $n_i$ is the number of agents for the \emph{i}-the combination, and $N$ is the total number of agents ($nAgents$). The index ranges is bounded between 0 (low diversity) and 1 (high diversity). 
 
 \section{Initialization}
 
@@ -98,11 +99,10 @@ This model is populated by $nAgents$ located at random spatial coordinates. Each
 
 \subsection{Environment}
 
-The value of $maxResources$ of each cell is sampled from a uniform distribution $U(0,maxEnergy)$. Current $resources$ of each cell is then copied from its $maxResources$ value.
-
 \section{Input data}
 
 There are text input files in the models' git repository. 
+%I don't think input data refers to parameter values ?
 
 \section{Submodels}
 
@@ -123,15 +123,21 @@ Each focal agent first defines its social teacher as a randomly chosen agents lo
 
 \subsubsection{Prestige-Biased Transmission}
 
-As in the unbiased transmission model, the focal agents selects a social teacher within distance $interactionRadius$. This time, the probability of being selected as social teacher is however proportional to the trait value at the index number prestigeIndex. More specifically the probability $P$ of selecting a social teacher $x$ from a total population of $N$ agents is given by:
+As in the unbiased transmission model, the focal agents selects a social teacher within distance $interactionRadius$. This time, the probability of being selected as social teacher is however proportional to the trait value at the index number prestigeIndex. More specifically the probability $\pi$ of selecting a social teacher $x$ from a the pool of potential social teachers $P$ (so that all agents in $P$ are located within distance $interactionRadius$ from the focal agent) is given by:
 
-$$ P_x = \frac{T_{p,x}+1}{\sum\limits_{i=1}^{N}{(T_{p,i}+1)}} $$
+\begin{equation}
+ \pi_x = \frac{T_{p,x}+1}{\sum\limits_{i=1}^{P}{(T_{p,i}+1)}} 
+\end{equation}
 
-Thus if three agents located within distance $interactionRadius$, have respectively ${3,2,0}$ as trait value at their $prestigeIndex$, the probability for the first agent to be selected is $ \frac{3+1}{(3+1)(2+1)(0+1)} = 0.5$. As for the unbiased model, the actual cultural trait slot being copied is randomly selected, hence portraying social contexts where the learners selects a teacher based on its prestige, but it is not always aware of which cultural trait determines such prestige.  As in the other models, with probability $innovationRate$ the newly acquired is swapped with a random value from $traitRange$.
+where $T_{p,x}$ and $T_{p,x}$ are respectively the prestige index values of the agent $x$ and $i$. Thus if three agents located within distance $interactionRadius$, have respectively ${3,2,0}$ as trait value at their $prestigeIndex$, the probability for the first agent to be selected is $ \frac{3+1}{(3+1)(2+1)(0+1)} = 0.5$. As for the unbiased model, the actual cultural trait slot being copied is randomly selected, hence portraying social contexts where the learners selects a teacher based on its prestige, but it is not always aware of which cultural trait determines such prestige.  As in the other models, with probability $innovationRate$ the newly acquired is swapped with a random value from $traitRange$.
 
 \subsubsection{Conformist Transmission}
 
 The focal agent defines the pool of social teachers (i.e. all agents located within distance $interactionRadius$) and a randomly selected index value for its cultural trait slots. Then it copies the most common value amongst the social teachers (randomly selecting between the most common ones in case of a tie). With probability $innovationRate$ the newly acquired is swapped with a random value from $traitRange$.
+
+\section{References}
+\bibliographystyle{apalike}
+\bibliography{references}
 
 \end{document}
 
