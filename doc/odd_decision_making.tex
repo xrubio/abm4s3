@@ -23,7 +23,7 @@ Each agent is defined by a spatial location $x,y$, its current level of $energy$
 
 \subsection{Environment}
 
-Agents move within a spatial grid with dimensions $xDim \times yDim$. The zone represents a heterogeneous resource landscape where the cell in each set of coordinates $x,y$ is defined by the current level of resources it contains $resources$ and a maximum level $maxResources$. 
+Agents move within a spatial grid with dimensions $xDim \times yDim$. The grid represents a heterogeneous resource landscape where the cell in each set of coordinates $x,y$ is defined by the current level of resources it contains $resources$ and a maximum level $maxResources$. 
 
 \section{Process overview and scheduling}
 
@@ -44,7 +44,7 @@ The order of agents' execution is shuffled every time step, and each phase is si
 
 \subsection{Basic principles}
 
-The basic principles for this model are agents exist in a landscape of cells whereby they attempt to obtain resources from these cells. Cell resources grow at constant states, while agents are able to view some distance within a space and can move to areas where they seem benefit in consuming resources from cells.
+The basic principles for this model are agents exist in a landscape of cells whereby they attempt to obtain resources from these cells. Cell resources grow at constant rates, while agents are able to view some distance within a space and can move to areas where they seem benefit in consuming resources from cells.
 
 \subsection{Emergence}
 
@@ -68,15 +68,15 @@ Agents do not predict.
 
 \subsection{Sensing}
 
-Agents sense  $resources$ and require $energy$ to live and reproduce.
+Agents sense  $resources$ within a neighbourhood of Chebyshev distance $radius$. %We might consider the name to something like searchNeighbourhood or something.
 
 \subsection{Interaction}
 
-Agents explicitly interact with environment collecting $resources$. Competition between agents is indirect though the environment.
+Agents directly interact with environment collecting $resources$. Competition between agents indirectly emerge from resource exploitation. 
 
 \subsection{Stochasticity}
 
-The only stochastic sources are the order of execution of agents and the choice of cell to move if two (or more) cells have identical $resource$ value.
+Stochastic elements include the initial  distribution of resources and agents,  the order of execution of agents, and the choice of cell to move if two (or more) cells have maximum $resource$ value in the search neighbourhood. 
 
 \subsection{Collectives}
 
@@ -84,7 +84,7 @@ Agent operate independently.
 
 \subsection{Observation}
 
-Population size is the summary statistic chosen to analyse the outcome of the model.
+The number of agents is calculated at each time-step.
 
 \section{Initialization}
 
@@ -106,7 +106,7 @@ The model uses data files, which are included in the git repository for the mode
 
 \subsection{Decision making}
 
-All agents move to a new location based on a greedy decision making process: each agent will move to the cell with highest resources within $radius$ of its current location $x,y$. Chebyshev distance is used to define the list of candidates (i.e. the greatest distance of the two dimensions, $x$ and $y$).
+All agents move to a new location based on a greedy decision making process: each agent will move to the cell with highest resources within $radius$ of its current location $x,y$. Chebyshev distance is used to define the list of candidates (i.e. the greatest distance of the two dimensions, $x$ and $y$). %I think this definition is a bit confusing? Maybe a figure?
 
 \subsection{Collection}
 
@@ -114,7 +114,7 @@ All agents collect resources up to $maxEnergy$ and the collected amount is remov
 
 \subsection{Cloning}
 
-Agents whose $energy$ equals $maxEnergy$ produce offspring. The new agents have the same spatial location $x,y$ than their parents, and the $energy$ of both (parent and offspring) is updated to $energy = maxEnergy/2$.
+Agents whose $energy$ equals $maxEnergy$ produce offspring. These have the same spatial location $x,y$ than their parents, and the $energy$ of both (parent and offspring) is updated to $energy = maxEnergy/2$.
 
 \subsection{Energy expenditure}
 
@@ -123,6 +123,9 @@ Agents decrease their $energy$ level by $energyCost$. If $energy \leq 0$ the age
 \subsection{Resource growth}
 
 The $resources$ of each cell will increase every time step by the parameter $resourceGrowthRate$ up to the local $maxResources$.
+
+\section{References}
+\bibliography{references}
 
 \end{document}
 
