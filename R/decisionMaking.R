@@ -16,7 +16,7 @@
 
 
 
-#nAgents=10;energyCost=25;maxEnergy=100;resourceGrowthRate=25;nSteps=100;dimX=5;dimY=5;plot=FALSE;verbose=FALSE
+#nAgents=10;energyCost=25;maxEnergy=100;resourceGrowthRate=25;nSteps=100;dimX=30;dimY=30;plot=FALSE;verbose=FALSE
 
 main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                nSteps=100,dimX=30,dimY=30,
@@ -52,22 +52,12 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                 
                   for (a in 1:nrow(agents))
                             {              
-                                
                                         #agents consume
                                 collection = maxEnergy-agents$energy[a] #max possible collection
                                 energyInCell = resource[agents$x[a],agents$y[a]] #available ammount of energy
-                                
-                                if(collection>energyInCell)
-                                    {
-                                        collection=energyInCell
-                                        resource[agents$x[a],agents$y[a]]=0
-                                    }
-                                else
-                                    {
-                                        resource[agents$x[a],agents$y[a]]=energyInCell-collection
-                                    }
-                                agents$energy[a] = agents$energy[a] + collection
-                                
+                                collected = min(energyInCell, maxEnergy - agents$energy[a])[1]
+                                resource[agents$x[a],agents$y[a]]=resource[agents$x[a],agents$y[a]]-collected
+                                agents$energy[a]=agents$energy[a]+collected
                             }
                 
               
