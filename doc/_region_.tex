@@ -1,0 +1,129 @@
+\message{ !name(odd_decision_making.tex)}\documentclass[11pt,a4paper,twocolumn,notitlepage]{article}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+\message{ !name(odd_decision_making.tex) !offset(-3) }
+
+
+\title{ODD for the decision-making model}
+\author{Xavier Rubio-Campillo \and Mark Altaweel \and C. Michael Barton \and Enrico R. Crema}
+\maketitle
+
+\section{Purpose}
+
+This model illustrates how ABM can be used to explore decision making in the context of a heterogeneous environment. In particular, we will examine how variations in agents' mobility can produce the emergence of a tragedy of the commons.
+
+TODO: reference paper?
+
+\section{Entities, state variables, and scales}
+\subsection{Agents}
+
+Each agent is defined by a spatial location $x,y$, its current level of $energy$ and the $energyCost$ it consumes every time step.
+
+\subsection{Environment}
+
+Agents move within a spatial grid with dimensions $xDim \times yDim$. The zone represents a heterogeneous resource landscape where the cell in each set of coordinates $x,y$ is defined by the current level of resources it contains $resources$ and a maximum level $maxResources$. 
+
+\section{Process overview and scheduling}
+
+The simulation proceeds with a discrete number of time-steps, each where the following process updates the population of agents and the resources in the environment.
+
+\begin{enumerate}
+\item{Decision making}
+\item{Collection}
+\item{Cloning}
+\item{Energy expenditure}
+\item{Resource growth}
+
+The order of agents' execution is shuffled every time step, and each phase is simultaneously executed for all agents before moving to the next one.
+
+\end{enumerate}
+
+\section{Design concepts}
+
+\subsection{Basic principles}
+
+No idea
+
+\subsection{Emergence}
+
+Tragedy of the commons will emerge from the system if all agents have access to the same environmental information (i.e. high $radius$ values).
+
+\subsection{Adaptation}
+
+No
+
+\subsection{Objectives}
+
+The objective of each agent is to collect the highest value of $resources$ per time step.
+
+\subsection{Learning}
+
+No
+
+\subsection{Prediction}
+
+No
+
+\subsection{Sensing}
+
+\subsection{Interaction}
+
+Agents explicitly interact with environment collecting $resources$. Competition between agents is indirect though the environment.
+
+\subsection{Stochasticity}
+
+The only stochastic sources are the order of execution of agents and the choice of cell to move if two (or more) cells have identical $resource$ value.
+
+\subsection{Collectives}
+
+No idea
+
+\subsection{Observation}
+
+Population size is the summary statistic chosen to analyse the outcome of the model.
+
+\section{Initialization}
+
+\subsection{Agents}
+
+This model is initially populated by $nAgents$ located at random spatial coordinates.
+
+\subsection{Environment}
+
+The value of $maxResources$ of each cell is sampled from a uniform distribution $U(0,maxEnergy$. Current $resources$ of each cell is then copied from its $maxResources$ value.
+
+\section{Input data}
+
+No
+
+\section{Submodels}
+
+\subsection{Decision making}
+
+All agents move to a new location based on a greedy decision making process: each agent will move to the cell with highest resources within $radius$ of its current location $x,y$. Chebyshev distance is used to define the list of candidates (i.e. the greatest distance of the two dimensions, $x$ and $y$).
+
+\subsection{Collection}
+
+All agents collect resources up to $maxEnergy$ and the collected amount is removed from cell's $resources$. 
+
+\subsection{Cloning}
+
+Agents whose $energy$ equals $maxEnergy$ produce offspring. The new agents have the same spatial location $x,y$ than their parents, and the $energy$ of both (parent and offspring) is updated to $energy = maxEnergy/2$.
+
+\subsection{Energy expenditure}
+
+Agents decrease their $energy$ level by $energyCost$. If $energy \leq 0$ the agent dies and is removed from the simulation.
+
+\subsection{Resource growth}
+
+The $resources$ of each cell will increase every time step by the parameter $resourceGrowthRate$ up to the local $maxResources$.
+
+\end{document}
+
+
+\message{ !name(odd_decision_making.tex) !offset(-129) }
