@@ -1,6 +1,6 @@
-<repast.simphony.visualization.engine.CartesianDisplayDescriptor>
-  <name>New Display</name>
-  <type>2D</type>
+<repast.simphony.visualization.engine.DefaultDisplayDescriptor>
+  <name>A Display</name>
+  <type>TWO_D</type>
   <styles>
     <entry>
       <string>Decision.Cell</string>
@@ -14,11 +14,11 @@
   <editedStyles>
     <entry>
       <string>Decision.Cell</string>
-      <string>Decision.Cell.style_0.xml</string>
+      <string>Decision.Cell.style_5.xml</string>
     </entry>
     <entry>
       <string>Decision.Agent</string>
-      <string>Decision.Agent.style_2.xml</string>
+      <string>Decision.Agent.style_5.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -31,7 +31,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-501493584</hashCode>
+    <hashCode>1569168502</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -50,9 +50,10 @@
     <repast.simphony.scenario.data.ProjectionData>
       <id>grid</id>
       <attributes/>
-      <type>grid</type>
+      <type>GRID</type>
     </repast.simphony.scenario.data.ProjectionData>
   </projections>
+  <valueLayers/>
   <visualizationProperties class="repast.simphony.visualization.UnitSizeLayoutProperties">
     <unitSize>15.0</unitSize>
   </visualizationProperties>
@@ -71,7 +72,7 @@
               </entry>
               <entry>
                 <string>SHOW</string>
-                <boolean>false</boolean>
+                <boolean>true</boolean>
               </entry>
               <entry>
                 <string>COLOR</string>
@@ -90,5 +91,4 @@
     <blue>255</blue>
     <alpha>255</alpha>
   </backgroundColor>
-  <valueLayers/>
-</repast.simphony.visualization.engine.CartesianDisplayDescriptor>
+</repast.simphony.visualization.engine.DefaultDisplayDescriptor>
