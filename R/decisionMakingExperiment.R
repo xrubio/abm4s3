@@ -1,4 +1,4 @@
-source("./decusionMaking.R")
+source("./decisionMaking.R")
 library(utils)
 library(foreach)
 library(doParallel)
@@ -15,3 +15,15 @@ Results=foreach(r=1:30,.combine=cbind) %dopar%
 }
 close(pb)
 save.image("experimentDecisionMakingResults.RData")
+
+
+# Single Setting Fast Run #
+nsim=100
+pb <- txtProgressBar(min = 1, max = nsim, style=3)
+
+Results=foreach(s=1:nsim,.combine=c) %dopar%
+{
+    setTxtProgressBar(pb, s)
+    main(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,nSteps=1000,dimX=30,dimY=30,plot=FALSE,verbose=FALSE,radius=1)[1000]
+}
+close(pb)
