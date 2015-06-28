@@ -42,15 +42,16 @@ public class DecisionContext implements ContextBuilder<Object>{
 		
 		
 		//we take the number of agents and build them here
-		int numAgents = (Integer)p.getValue("nAgents");
+	//	int numAgents = RandomHelper.nextIntFromTo(1, 200);
+		int numAgents=(Integer)p.getValue("numberOfAgents");
 		
 		for(int i=0; i < numAgents ; i++){
 			Agent agent = new Agent(space,grid);
 			context.add(agent);
 			double x=RandomHelper.nextIntFromTo(0, xDim-1);
 			double y=RandomHelper.nextIntFromTo(0, yDim-1);
-			space.moveTo(agent, x,y);
-			grid.moveTo(agent, (int)Math.round(x),(int)Math.round(y));
+			space.moveTo(agent,x,y);
+			grid.moveTo(agent,(int)Math.rint(x),(int)Math.rint(y));
 		}
 		
 		for(int i=0; i < xDim; i++){

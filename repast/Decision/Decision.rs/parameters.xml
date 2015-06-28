@@ -2,7 +2,6 @@
 <parameters>
 
 	<parameter name="randomSeed" displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
-	<parameter name="nAgents" displayName="nAgent" type="int" defaultValue="5" />
 	
 	<parameter name="xDim" displayName="xDim" type="int" 
 						defaultValue="30" 
@@ -13,6 +12,20 @@
 		
 		<parameter name="yDim" displayName="yDim" type="int" 
 						defaultValue="30" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		<parameter name="numberOfAgents" displayName="yDim" type="int" 
+						defaultValue="50" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		<parameter name="searchRadius" displayName="searchRadius" type="int" 
+						defaultValue="1" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
@@ -36,14 +49,14 @@
 		<parameter name="memory" displayName="memory" type="boolean" defaultValue="false" />
 		
 		<parameter name="energyCost" displayName="energyCost" type="double" 
-						defaultValue="9.0" 
+						defaultValue="25.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 		
 		<parameter name="resourceGrowthRate" displayName="resourceGrowthRate" type="double" 
-						defaultValue="2.0" 
+						defaultValue="25.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									

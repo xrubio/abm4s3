@@ -1,0 +1,729 @@
+INFO  [pool-2-thread-1] 2015-03-05 06:58:48,497 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425538291294 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-05 06:59:49,513 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425538291294 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-05 07:00:50,528 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425538291294 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-05 07:01:51,546 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425538291294 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-05 07:02:52,565 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425538291294 on altaweel.arch.ucl.ac.uk for DONE: no
+ERROR [SwingWorker-pool-1-thread-1] 2015-03-05 07:04:12,569 repast.simphony.batch.ssh.SessionsDriver - Error while polling a remote for finish
+java.util.concurrent.ExecutionException: com.jcraft.jsch.JSchException: session is down
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at repast.simphony.batch.ssh.SessionsDriver.pollForDone(SessionsDriver.java:216)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:70)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: com.jcraft.jsch.JSchException: session is down
+	at com.jcraft.jsch.Channel.sendChannelOpen(Channel.java:667)
+	at com.jcraft.jsch.Channel.connect(Channel.java:151)
+	at com.jcraft.jsch.Channel.connect(Channel.java:145)
+	at repast.simphony.batch.ssh.SSHSession.executeCmd(SSHSession.java:153)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:51)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 3 more
+ERROR [AWT-EventQueue-0] 2015-03-05 07:17:44,085 repast.simphony.ui.RSApplication - Error while initializing simulation
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+	at Decision.DecisionContext.build(DecisionContext.java:30)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:287)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:290)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:290)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:283)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:160)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:192)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6505)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3320)
+	at java.awt.Component.processEvent(Component.java:6270)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4861)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+INFO  [AWT-EventQueue-0] 2015-03-05 07:21:23,883 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 07:21:24,026 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:21:31,062 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost3176779276858518127.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:21:31,142 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:21:31,143 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0379
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:21:31,143 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869/maltaweel_localhost3176779276858518127.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:21:31,470 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-5] 2015-03-05 07:21:43,030 repast.simphony.batch.ssh.LocalSession - ERROR [main] 07:21:43,028 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-5] 2015-03-05 07:21:43,031 repast.simphony.batch.ssh.LocalSession - java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double
+INFO  [Thread-5] 2015-03-05 07:21:43,031 repast.simphony.batch.ssh.LocalSession - 	at Decision.DecisionContext.build(DecisionContext.java:30)
+INFO  [Thread-5] 2015-03-05 07:21:43,031 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+INFO  [Thread-5] 2015-03-05 07:21:43,031 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+INFO  [Thread-5] 2015-03-05 07:21:43,031 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:287)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:290)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:290)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:283)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-5] 2015-03-05 07:21:43,032 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-5] 2015-03-05 07:21:43,033 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-5] 2015-03-05 07:21:43,033 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-2-thread-1] 2015-03-05 07:22:31,480 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,484 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0057
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,511 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869
+WARN  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,529 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}/Users/maltaweel/NSF_Insect_Project/Decision/output/ModelOutput*.batch_param_map.csv in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869/instance_1
+WARN  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,529 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}/Users/maltaweel/NSF_Insect_Project/Decision/output/ModelOutput*.csv in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540088869/instance_1
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,529 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,531 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0008
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:22:31,531 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0449
+INFO  [AWT-EventQueue-0] 2015-03-05 07:22:57,719 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 07:22:57,867 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:23:05,277 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost5499452100119607730.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540182973 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:23:05,340 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:23:05,341 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0395
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:23:05,341 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540182973/maltaweel_localhost5499452100119607730.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:23:05,680 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 07:24:05,689 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540182973 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:25:05,690 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540182973 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-05 07:27:32,697 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 07:27:32,846 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:27:40,001 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost9019507082916436681.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:27:40,065 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:27:40,066 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0380
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:27:40,066 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783/maltaweel_localhost9019507082916436681.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 07:27:40,487 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 07:28:40,494 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:29:40,497 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:30:40,498 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:31:40,499 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:32:40,501 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:33:40,503 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:34:40,506 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:35:40,507 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:36:40,511 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:37:40,513 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:38:40,516 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:39:40,519 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:40:40,523 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:41:40,524 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:42:40,526 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:43:40,530 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:44:40,532 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:45:40,533 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:46:40,536 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:47:40,537 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:48:40,540 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:49:40,543 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:50:40,546 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:51:40,549 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:52:40,551 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:53:40,555 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:54:40,558 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:55:40,561 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:56:40,564 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:57:40,567 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:58:40,569 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 07:59:40,573 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:00:40,576 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:01:40,577 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:02:40,578 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:03:40,580 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:04:40,581 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:05:40,582 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:06:40,583 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:07:40,587 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:08:40,587 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:09:40,590 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:10:40,594 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:11:40,595 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 08:12:40,598 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:12:40,599 repast.simphony.batch.ssh.SessionsDriver - Run Time: 45.0089
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:12:40,629 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425540457783
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:12:40,645 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:12:40,837 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0040
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:12:40,837 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 45.0515
+INFO  [AWT-EventQueue-0] 2015-03-05 08:55:29,411 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 08:55:29,580 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:55:37,308 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk8398679626989541753.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1425545735128/maltaweel_altaweel.arch.ucl.ac.uk8398679626989541753.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:56:42,249 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:56:42,252 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1187
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:56:42,486 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 08:56:42,597 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 08:56:42,597 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 08:56:42,598 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:56:43,501 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 08:56:45,605 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-05 08:57:47,827 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425545735128 on altaweel.arch.ucl.ac.uk for DONE: no
+FATAL [Thread-7] 2015-03-05 09:07:01,560 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (4.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Decision.Agent$$FastClassByCGLIB$$c8fde673.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at Decision.Agent.probabilityMove(Agent.java:176)
+	at Decision.Agent.step(Agent.java:128)
+	... 10 more
+INFO  [AWT-EventQueue-0] 2015-03-05 09:11:34,733 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 09:11:34,895 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:11:42,356 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk515582823011094370.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1425546700095/maltaweel_altaweel.arch.ucl.ac.uk515582823011094370.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:12:46,926 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:12:46,928 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1139
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:12:47,115 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 09:12:47,231 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 09:12:47,231 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-05 09:12:47,231 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:12:48,129 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 09:12:50,158 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-05 09:13:52,397 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425546700095 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-05 09:14:53,411 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425546700095 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-05 11:09:25,016 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 11:09:25,188 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:09:33,014 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost9194154899196698314.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:09:33,104 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:09:33,123 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0386
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:09:33,123 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786/maltaweel_localhost9194154899196698314.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:09:33,489 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 11:10:33,499 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:11:33,502 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:12:33,505 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:13:33,507 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:14:33,516 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:15:33,524 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:16:33,526 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:17:33,529 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:18:33,531 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:19:33,533 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:20:33,536 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:21:33,538 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:22:33,540 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:23:33,541 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:24:33,542 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:25:33,544 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:26:33,546 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:27:33,549 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:28:33,551 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:29:33,553 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:30:33,554 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:31:33,556 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:32:33,558 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:33:33,559 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 11:34:33,561 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:34:33,565 repast.simphony.batch.ssh.SessionsDriver - Run Time: 25.0073
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:34:33,613 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425553770786
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:34:33,643 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:34:34,042 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0079
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 11:34:34,042 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 25.0546
+INFO  [AWT-EventQueue-0] 2015-03-05 12:24:16,136 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 12:24:16,323 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 12:24:24,266 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost5263580344973843908.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 12:24:24,340 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 12:24:24,350 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0375
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 12:24:24,351 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088/maltaweel_localhost5263580344973843908.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 12:24:24,721 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 12:25:24,732 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:26:24,736 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:27:24,739 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:28:24,741 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:29:24,742 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:30:24,744 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:31:24,746 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:32:24,748 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:33:24,750 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:34:24,752 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:35:24,753 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:36:24,755 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:37:24,757 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:38:24,758 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:39:24,759 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:40:24,761 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:41:24,762 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:42:24,764 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:43:24,766 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:44:24,768 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:45:24,771 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:46:24,772 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:47:24,773 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:48:24,774 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:49:24,775 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:50:24,778 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:51:24,779 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:52:24,781 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:53:24,784 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:54:24,785 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:55:24,786 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:56:24,788 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:57:24,790 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:58:24,792 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 12:59:24,794 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:00:24,795 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:01:24,797 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:02:24,799 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:03:24,800 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:04:24,803 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:05:24,804 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:06:24,806 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:07:24,807 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:08:24,808 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:09:24,812 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:10:24,814 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:11:24,817 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:12:24,819 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:13:24,822 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:14:24,826 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:15:24,828 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 13:16:24,833 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 13:16:24,836 repast.simphony.batch.ssh.SessionsDriver - Run Time: 52.0081
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 13:16:24,882 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425558262088
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 13:16:24,909 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 13:16:25,339 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0084
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 13:16:25,339 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 52.0546
+INFO  [AWT-EventQueue-0] 2015-03-05 14:14:12,989 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 14:14:13,149 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:14:20,869 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost8827179993515982631.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425564858680 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:14:20,960 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:14:20,974 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0380
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:14:20,975 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425564858680/maltaweel_localhost8827179993515982631.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:14:21,314 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 14:15:21,323 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425564858680 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:15:21,325 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0058
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:15:21,351 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425564858680
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:15:21,366 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:15:21,518 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0032
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:15:21,518 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0477
+INFO  [AWT-EventQueue-0] 2015-03-05 14:17:30,936 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 14:17:31,072 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:17:38,157 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost592719715181375825.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425565055992 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:17:38,211 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:17:38,212 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0370
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:17:38,212 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425565055992/maltaweel_localhost592719715181375825.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:17:38,541 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 14:18:38,548 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425565055992 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:18:38,551 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0056
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:18:38,577 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425565055992
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:18:38,591 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:18:38,725 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0029
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:18:38,725 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0459
+INFO  [AWT-EventQueue-0] 2015-03-05 14:52:55,359 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 14:52:55,505 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:53:02,616 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost8978371366815570500.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:53:02,688 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:53:02,689 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0378
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:53:02,690 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422/maltaweel_localhost8978371366815570500.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-05 14:53:03,073 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 14:54:03,082 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 14:55:03,085 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 14:56:03,088 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 14:57:03,090 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-05 14:57:15,356 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-05 14:57:15,360 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:57:21,760 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost6450901628224276727.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526 ...
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:57:21,852 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:57:21,852 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0388
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:57:21,853 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526/maltaweel_localhost6450901628224276727.zip
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:57:22,189 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-05 14:58:03,092 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-3-thread-1] 2015-03-05 14:58:22,220 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 14:59:03,095 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-3-thread-1] 2015-03-05 14:59:22,222 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,224 repast.simphony.batch.ssh.SessionsDriver - Run Time: 2.0062
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,250 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526
+WARN  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,268 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}output/ModelOutput*.csv in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567439526/instance_1
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,268 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/NSF_Insect_Project/Decision/output
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,274 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0008
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-05 14:59:22,275 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 2.0462
+INFO  [pool-2-thread-1] 2015-03-05 15:00:03,097 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:01:03,098 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:02:03,101 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:03:03,103 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:04:03,104 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:05:03,106 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:06:03,107 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:07:03,111 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:08:03,114 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:09:03,115 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:10:03,118 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:11:03,121 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:12:03,123 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:13:03,125 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:14:03,128 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:15:03,131 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:16:03,134 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:17:03,137 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:18:03,139 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:19:03,142 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:20:03,144 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:21:03,147 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:22:03,150 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:23:03,153 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:24:03,156 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:25:03,157 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:26:03,161 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:27:03,163 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:28:03,165 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:29:03,167 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:30:03,169 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:31:03,171 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-05 15:32:03,172 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425567180422 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-08 21:48:08,196 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-08 21:48:08,371 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:48:15,837 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk187534089584560313.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1425851293677/tcrnma3_unstan.arch.ucl.ac.uk187534089584560313.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:49:20,899 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:49:20,902 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1204
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:49:21,129 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-08 21:49:21,212 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-08 21:49:21,224 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-08 21:49:21,224 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-08 21:49:21,224 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:49:22,143 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:49:24,177 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-08 21:50:26,439 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425851293677 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-08 21:54:31,324 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-08 21:54:31,475 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:54:38,568 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost5308309659708366799.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425851676421 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:54:38,632 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:54:38,633 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0368
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:54:38,633 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425851676421/maltaweel_localhost5308309659708366799.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-08 21:54:39,003 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-08 21:55:39,013 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425851676421 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-08 21:56:39,014 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425851676421 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 06:37:30,010 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 06:37:30,183 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 06:37:38,076 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost4911479690189327284.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 06:37:38,142 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 06:37:38,154 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0405
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 06:37:38,154 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710/maltaweel_localhost4911479690189327284.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 06:37:38,471 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 06:38:38,480 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:39:38,482 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:40:38,483 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:41:38,486 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:42:38,489 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:43:38,491 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:44:38,494 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:45:38,495 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:46:38,497 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:47:38,499 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:48:38,500 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:49:38,502 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:50:38,553 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:51:38,555 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:52:38,557 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:53:38,559 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:54:38,561 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:55:38,563 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 06:56:38,565 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425883055710 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 07:03:12,725 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 07:03:12,888 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 07:03:20,467 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost5893264657305677308.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 07:03:20,530 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 07:03:20,544 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0376
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 07:03:20,544 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275/maltaweel_localhost5893264657305677308.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 07:03:20,862 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 07:04:20,871 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:05:20,873 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:06:20,875 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:07:20,876 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:08:20,879 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:09:20,881 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:10:20,884 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:11:20,887 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:12:20,888 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:13:20,890 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:14:20,893 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:15:20,894 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:16:20,896 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 07:17:20,899 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425884598275 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 08:20:44,653 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 08:20:44,813 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:20:52,416 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost2158357881676483236.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889250235 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:20:52,482 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:20:52,496 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0375
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:20:52,496 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889250235/maltaweel_localhost2158357881676483236.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:20:52,836 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 08:21:52,845 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889250235 for DONE:  no
+ERROR [AWT-EventQueue-0] 2015-03-09 08:22:49,434 repast.simphony.ui.RSApplication - Scenario Load Error
+repast.simphony.scenario.ScenarioLoadException: Unable to convert parameter type. Please use a convertor.
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:220)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:353)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: org.xml.sax.SAXException: Unable to convert parameter type. Please use a convertor.
+repast.simphony.parameter.ParameterFormatException: Invalid format for parameter 'randomSeed'
+	at repast.simphony.parameter.ParametersParser.startElement(ParametersParser.java:128)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1350)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2778)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:333)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+	at repast.simphony.parameter.ParametersParser.<init>(ParametersParser.java:46)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:168)
+	... 22 more
+Caused by: repast.simphony.parameter.ParameterFormatException: Invalid format for parameter 'randomSeed'
+	at repast.simphony.parameter.ListTokenizer.parseIntValues(ListTokenizer.java:176)
+	at repast.simphony.parameter.ParameterUtils.parseDefaultValue(ParameterUtils.java:35)
+	at repast.simphony.parameter.ParametersParser.startElement(ParametersParser.java:96)
+	... 37 more
+Caused by: java.lang.NumberFormatException: For input string: "_NULL_"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at repast.simphony.parameter.ListTokenizer.parseIntValues(ListTokenizer.java:172)
+	... 39 more
+INFO  [AWT-EventQueue-0] 2015-03-09 08:24:58,975 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 08:24:59,143 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:25:06,384 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost4305476330390767766.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:25:06,438 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:25:06,439 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0372
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:25:06,439 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203/maltaweel_localhost4305476330390767766.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:25:06,788 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 08:26:06,796 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:27:06,799 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:28:06,801 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:29:06,803 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:30:06,806 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:31:06,808 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:32:06,811 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:33:06,813 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:34:06,816 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425889504203 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 08:35:20,745 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 08:35:20,881 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:35:28,205 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost3948840668320282535.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:35:28,270 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:35:28,271 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0376
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:35:28,271 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015/maltaweel_localhost3948840668320282535.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:35:28,608 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 08:36:28,615 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:37:28,617 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:38:28,619 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:39:28,621 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:40:28,623 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425890126015 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 08:51:29,731 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 08:51:29,904 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:51:37,140 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost6486764049255209303.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:51:37,208 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:51:37,210 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0372
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:51:37,210 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977/maltaweel_localhost6486764049255209303.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:51:37,572 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 08:52:37,587 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:53:37,589 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:54:37,591 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:55:37,593 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 08:56:37,595 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891094977 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 08:58:23,001 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 08:58:23,158 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:58:30,582 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost7783193038718191746.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:58:30,652 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:58:30,665 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0389
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:58:30,666 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317/maltaweel_localhost7783193038718191746.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 08:58:31,018 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 08:59:31,030 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:00:31,033 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:01:31,035 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:02:31,036 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:03:31,037 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:04:31,038 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:05:31,040 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:06:31,043 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:07:31,045 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:08:31,048 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:09:31,050 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:10:31,053 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:11:31,057 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:12:31,066 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:13:31,076 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:14:31,081 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:15:31,085 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:16:31,090 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425891508317 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-09 09:20:37,330 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 09:20:37,486 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:20:44,794 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk6945360204167591034.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1425892842630/tcrnma3_unstan.arch.ucl.ac.uk6945360204167591034.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:21:50,342 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:21:50,343 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1285
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:21:50,497 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-09 09:21:50,616 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-09 09:21:50,628 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-09 09:21:50,628 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-09 09:21:50,628 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:21:51,509 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:21:53,536 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-09 09:22:55,735 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425892842630 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-09 09:23:56,749 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425892842630 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-09 09:25:07,210 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-09 09:25:07,328 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:25:13,812 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost481063473351681289.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:25:13,875 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:25:13,876 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0384
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:25:13,876 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572/maltaweel_localhost481063473351681289.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-09 09:25:14,199 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-03-09 09:26:14,209 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:27:14,210 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 09:28:14,212 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 10:28:43,205 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 10:42:20,483 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
+INFO  [pool-2-thread-1] 2015-03-09 10:43:20,486 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1425893111572 for DONE:  no
