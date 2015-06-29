@@ -17,7 +17,7 @@
 									
 		/>
 		
-		<parameter name="numberOfAgents" displayName="yDim" type="int" 
+		<parameter name="numberOfAgents" displayName="numberOfAgents" type="int" 
 						defaultValue="50" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
