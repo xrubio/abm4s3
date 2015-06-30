@@ -19,6 +19,7 @@ import repast.simphony.random.RandomHelper;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
+import simphony.util.messages.MessageCenter;
 
 public class Agent {
 
@@ -132,7 +133,7 @@ public class Agent {
 	/**
 	 * The general step method that selects which scenario and which cell to go to. 
 	 */
-	 @ScheduledMethod(start = 1, interval = 2,priority = ScheduleParameters.FIRST_PRIORITY)
+	 @ScheduledMethod(start = 1, interval = 2,priority = ScheduleParameters.FIRST_PRIORITY,shuffle=false)
 	 public void step(){
 	 
 		 //here the conditionals control the options for which simulation type you want
@@ -187,13 +188,14 @@ public class Agent {
 		 space.moveTo(this, consumeCell.x,consumeCell.y);
 		
 		 consume(consumeCell);
-		 
+				 
 		 if(this.maxEnergy==this.energy)
 			 reproduce();
 		 
 		 spendEnergy();
-		 if(this.energy<=0)
+		 if(this.energy<=0){
 			 RunState.getSafeMasterContext().remove(this);
+		 }
 	 }
 	 
 	 /**
@@ -268,9 +270,7 @@ public class Agent {
 	 /**
 	  * Method to control how an agent remembers an area visited for resources in order to select it again.
 	  */
-	 public void memoryMechanism(){
-	//	 List<GridCell<Object>> neighbourhood=getNeighbourhood();
-		 
+	 public void memoryMechanism(){ 
 		 List<Cell> neighbourhood=getNeighbourhood();
 		 for(Cell gc: neighbourhood){
 			 
@@ -283,8 +283,7 @@ public class Agent {
 	  * Method for consuming energy.
 	  * @param c
 	  */
-	 public void consume(Cell c){
-		
+	 public void consume(Cell c){	
 		 //this simply removes energy from the cell and then gives that energy to the agent
 		 double energyDiff=this.maxEnergy-this.energy;
 		 
@@ -328,15 +327,10 @@ public class Agent {
 	  * The neighbourhood surrounding the cells of choice
 	  * @return a list of the neighbourhood
 	  */
-	// public List<GridCell<Object>> getNeighbourhood(){
 	 	public List<Cell> getNeighbourhood(){
 	 		
 			GridPoint pt = grid.getLocation(this);
 			Cell c = currentCell();
-			
-	//		 GridCellNgh<Object> nghCreator = new GridCellNgh<Object>(grid, pt,
-	//			Object.class, this.searchRadius,this.searchRadius);
-	//		List<GridCell<Object>> gridCells = nghCreator.getNeighborhood(true);
 			
 			Context context = RunState.getInstance().getMasterContext();
 			Iterator<Cell> ii = context.getObjects(Cell.class).iterator();

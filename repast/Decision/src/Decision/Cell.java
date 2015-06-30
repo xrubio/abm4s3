@@ -49,7 +49,7 @@ public class Cell {
 		this.maxResource = (Double)p.getValue("maxResource");
 		this.resoureGrowthRate=(Double)p.getValue("resourceGrowthRate");
 		this.resource=RandomHelper.nextDoubleFromTo(0, this.maxResource);
-	//	this.resource=50;
+	
 		this.maxResource=this.resource;
 		this.x=x;
 		this.y=y;
@@ -64,7 +64,6 @@ public class Cell {
 	 */
 	 @ScheduledMethod(start = 2, interval = 2,priority = ScheduleParameters.LAST_PRIORITY)
 	public void step(){
-		 
 		 //all the cell does in its behaviour is add resources. 
 		 this.resource=this.resoureGrowthRate+this.resource;
 		 if(this.resource>this.maxResource)

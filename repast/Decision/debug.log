@@ -821,3 +821,79 @@ com.thoughtworks.xstream.mapper.CannotResolveClassException: repast.simphony.vis
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+INFO  [AWT-EventQueue-0] 2015-06-29 10:28:06,435 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/Desktop/abm4s3/repast/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-06-29 10:28:06,612 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/Desktop/abm4s3/repast/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:28:14,007 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost914729959115633662.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570091761 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:28:14,066 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:28:14,067 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0384
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:28:14,067 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570091761/maltaweel_localhost914729959115633662.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:28:14,404 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-06-29 10:29:14,413 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570091761 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:29:14,414 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0058
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:29:14,436 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570091761
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:29:14,447 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/Desktop/abm4s3/repast/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:29:14,471 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0010
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:29:14,471 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0457
+INFO  [AWT-EventQueue-0] 2015-06-29 10:34:04,895 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/Desktop/abm4s3/repast/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-06-29 10:34:05,055 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/Desktop/abm4s3/repast/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:34:12,342 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost2894093138668093616.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570449971 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:34:12,417 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:34:12,418 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0408
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:34:12,418 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570449971/maltaweel_localhost2894093138668093616.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:34:12,806 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-06-29 10:35:12,816 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570449971 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:35:12,817 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0066
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:35:12,851 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1435570449971
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:35:12,871 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/Desktop/abm4s3/repast/Decision/output
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:35:12,930 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0019
+INFO  [SwingWorker-pool-1-thread-1] 2015-06-29 10:35:12,930 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0499
+FATAL [Thread-7] 2015-06-29 10:48:33,960 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2.0)
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at repast.simphony.util.collections.DelegatedIterator.next(DelegatedIterator.java:44)
+	at org.apache.commons.collections15.iterators.IteratorChain.next(IteratorChain.java:271)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:330)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:227)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)
+FATAL [Thread-7] 2015-06-29 10:50:42,518 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2.0)
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at repast.simphony.util.collections.DelegatedIterator.next(DelegatedIterator.java:44)
+	at org.apache.commons.collections15.iterators.IteratorChain.next(IteratorChain.java:271)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:330)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:227)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)
+FATAL [Thread-7] 2015-06-29 10:51:51,079 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2.0)
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at repast.simphony.util.collections.DelegatedIterator.next(DelegatedIterator.java:44)
+	at org.apache.commons.collections15.iterators.IteratorChain.next(IteratorChain.java:271)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:330)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:227)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)

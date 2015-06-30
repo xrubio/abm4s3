@@ -40,9 +40,6 @@ public class DecisionContext implements ContextBuilder<Object>{
 				new GridBuilderParameters<Object>(new BouncyBorders(),
 						new SimpleGridAdder<Object>(), true, xDim, yDim));
 		
-		
-		//we take the number of agents and build them here
-	//	int numAgents = RandomHelper.nextIntFromTo(1, 200);
 		int numAgents=(Integer)p.getValue("numberOfAgents");
 		
 		for(int i=0; i < numAgents ; i++){
@@ -55,7 +52,6 @@ public class DecisionContext implements ContextBuilder<Object>{
 		}
 		
 		for(int i=0; i < xDim; i++){
-			
 			for(int j=0; j < yDim; j++) {
 				Cell c = new Cell(space,grid,i,j);
 				context.add(c);
