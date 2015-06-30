@@ -38,10 +38,10 @@
 									
 		/>
 		
-		<parameter name="maxResource" displayName="maxResource" type="double" 
+		<parameter name="maxResource" displayName="maxResource" type="int" 
 						defaultValue="100" 
 						isReadOnly="false" 
-						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"							
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"							
 		/>
 		
 		<parameter name="decisionType" displayName="decisionType" type="String" defaultValue="greedy" />

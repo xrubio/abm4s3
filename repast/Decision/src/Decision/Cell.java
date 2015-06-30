@@ -17,7 +17,7 @@ public class Cell {
 	public ContinuousSpace space;
 	
 	/**The maximum resources that a cell can have*/
-	public double maxResource;
+	public int maxResource;
 	
 	/**The amount of resources a cell can have*/
 	public double resource;
@@ -46,11 +46,11 @@ public class Cell {
 		this.grid=grid;
 		this.space=space;
 		
-		this.maxResource = (Double)p.getValue("maxResource");
+		this.maxResource = (Integer)p.getValue("maxResource");
 		this.resoureGrowthRate=(Double)p.getValue("resourceGrowthRate");
 		this.resource=RandomHelper.nextDoubleFromTo(0, this.maxResource);
 	
-		this.maxResource=this.resource;
+		this.maxResource=(int)this.resource;
 		this.x=x;
 		this.y=y;
 	}
