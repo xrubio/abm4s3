@@ -1,0 +1,755 @@
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:38:11,624 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 13:38:11,816 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 13:38:11,816 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:38:12,638 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:38:14,666 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 13:39:17,091 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425994622560 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 13:52:01,146 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 13:52:01,302 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:52:08,768 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk6087577597859181110.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1425995526564/tcrnma3_unstan.arch.ucl.ac.uk6087577597859181110.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:53:14,797 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:53:14,800 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1372
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:53:14,951 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 13:53:15,029 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 13:53:15,041 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 13:53:15,042 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 13:53:15,042 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:53:15,962 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:53:17,991 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 13:54:20,232 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425995526564 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 13:55:20,209 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 13:55:20,373 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:55:27,875 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2421076272340483448187.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1425995725574/markaltaweel_128.135.250.2421076272340483448187.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:56:42,012 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:56:42,014 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.2740
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:56:43,081 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@128.135.250.242
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 13:56:43,827 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 13:56:43,827 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_51-b13
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 13:56:43,827 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 13:56:43,828 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:56:44,207 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@128.135.250.242
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:56:47,456 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@128.135.250.242 ...
+INFO  [pool-2-thread-1] 2015-03-10 13:57:51,047 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425995725574 on 128.135.250.242 for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 13:59:01,107 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 13:59:01,270 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 13:59:08,992 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk838934821981226748.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1425995946669/maltaweel_altaweel.arch.ucl.ac.uk838934821981226748.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:00:15,017 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:00:15,019 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1392
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:00:15,277 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:00:16,055 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:00:16,056 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:00:16,056 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:00:16,293 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:00:18,320 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 14:01:20,663 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425995946669 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 14:02:21,681 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425995946669 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 14:20:31,124 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 14:20:31,299 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:20:39,023 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk5605346829934399437.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1425997236748/maltaweel_altaweel.arch.ucl.ac.uk5605346829934399437.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:21:45,179 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:21:45,180 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1405
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:21:45,449 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:21:45,967 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:21:45,967 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 14:21:45,967 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:21:46,466 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 14:21:48,494 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 14:22:50,818 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425997236748 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 15:02:09,830 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 15:02:09,997 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:02:18,082 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk5650264182206151258.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1425999735852/maltaweel_altaweel.arch.ucl.ac.uk5650264182206151258.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:03:23,875 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:03:23,878 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1337
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:03:24,053 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:03:24,535 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:03:24,536 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:03:24,536 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:03:25,066 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:03:27,175 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 15:04:29,426 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425999735852 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 15:05:30,442 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425999735852 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 15:06:31,458 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1425999735852 on altaweel.arch.ucl.ac.uk for DONE: no
+ERROR [SwingWorker-pool-1-thread-1] 2015-03-10 15:08:11,458 repast.simphony.batch.ssh.SessionsDriver - Error while polling a remote for finish
+java.util.concurrent.ExecutionException: com.jcraft.jsch.JSchException: session is down
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at repast.simphony.batch.ssh.SessionsDriver.pollForDone(SessionsDriver.java:216)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:70)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: com.jcraft.jsch.JSchException: session is down
+	at com.jcraft.jsch.Channel.sendChannelOpen(Channel.java:667)
+	at com.jcraft.jsch.Channel.connect(Channel.java:151)
+	at com.jcraft.jsch.Channel.connect(Channel.java:145)
+	at repast.simphony.batch.ssh.SSHSession.executeCmd(SSHSession.java:153)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:51)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 3 more
+INFO  [AWT-EventQueue-0] 2015-03-10 15:13:29,618 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 15:13:29,778 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:13:37,460 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk127984231037021135.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1426000415144/tcrnma3_unstan.arch.ucl.ac.uk127984231037021135.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:14:45,305 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:14:45,307 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1694
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:14:45,460 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 15:14:45,538 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 15:14:45,550 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 15:14:45,551 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 15:14:45,551 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:14:46,472 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:14:48,503 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 15:15:50,737 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426000415144 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 15:17:02,180 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 15:17:02,347 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:17:10,003 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2425745380125841527205.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426000627734/markaltaweel_128.135.250.2425745380125841527205.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:18:32,141 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:18:32,142 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.4068
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:18:33,159 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@128.135.250.242
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 15:18:33,518 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 15:18:33,518 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_51-b13
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 15:18:33,518 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 15:18:33,519 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:18:34,276 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@128.135.250.242
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:18:36,611 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@128.135.250.242 ...
+INFO  [pool-2-thread-1] 2015-03-10 15:19:40,223 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426000627734 on 128.135.250.242 for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 15:20:23,534 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 15:20:23,688 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:20:31,114 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk7554123015190834961.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426000828838/maltaweel_altaweel.arch.ucl.ac.uk7554123015190834961.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:21:38,018 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:21:38,019 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1530
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:21:38,218 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:21:39,878 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:21:39,879 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 15:21:39,879 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:21:40,277 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 15:21:43,332 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 15:22:49,941 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426000828838 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 17:30:10,315 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:30:10,484 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:30:19,247 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk9152411521707519237.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426008616892/maltaweel_altaweel.arch.ucl.ac.uk9152411521707519237.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:31:26,956 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:31:26,958 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1678
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:31:27,193 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 17:31:27,599 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 17:31:27,600 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 17:31:27,600 repast.simphony.batch.ssh.SSHSession - )
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 17:31:27,601 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:31:28,207 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:31:30,232 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 17:32:32,948 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426008616892 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 17:34:04,419 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:34:04,562 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:34:11,634 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost3528706212709424403.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1426008849470 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:34:11,689 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:34:11,690 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0370
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:34:11,691 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1426008849470/maltaweel_localhost3528706212709424403.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:34:12,022 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [AWT-EventQueue-0] 2015-03-10 17:34:55,569 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:34:55,583 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-10 17:35:04,866 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk2489354447349700621.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1426008901750/tcrnma3_unstan.arch.ucl.ac.uk2489354447349700621.zip ...
+INFO  [pool-2-thread-1] 2015-03-10 17:35:12,031 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1426008849470 for DONE:  no
+INFO  [AWT-EventQueue-0] 2015-03-10 17:36:51,425 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:36:51,579 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 17:36:58,142 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2428363604126378145779.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426009015948/markaltaweel_128.135.250.2428363604126378145779.zip ...
+ERROR [SwingWorker-pool-1-thread-1] 2015-03-10 17:38:28,600 repast.simphony.batch.ssh.SessionsDriver - Error while copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2428363604126378145779.zip via sftp to markaltaweel@128.135.250.242
+4: java.net.SocketException: Broken pipe
+	at com.jcraft.jsch.ChannelSftp._put(ChannelSftp.java:638)
+	at com.jcraft.jsch.ChannelSftp.put(ChannelSftp.java:437)
+	at com.jcraft.jsch.ChannelSftp.put(ChannelSftp.java:338)
+	at repast.simphony.batch.ssh.SSHSession.copyFileToRemote(SSHSession.java:263)
+	at repast.simphony.batch.ssh.RemoteSession.copyFile(RemoteSession.java:152)
+	at repast.simphony.batch.ssh.RemoteSession.initModelArchive(RemoteSession.java:134)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:58)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:113)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:159)
+	at com.jcraft.jsch.IO.put(IO.java:60)
+	at com.jcraft.jsch.Session._write(Session.java:1265)
+	at com.jcraft.jsch.Session.write(Session.java:1232)
+	at com.jcraft.jsch.ChannelSftp.sendWRITE(ChannelSftp.java:2342)
+	at com.jcraft.jsch.ChannelSftp._put(ChannelSftp.java:618)
+	... 14 more
+INFO  [AWT-EventQueue-0] 2015-03-10 17:38:57,646 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:38:57,649 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-10 17:39:03,175 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2426078596435714480072.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426009140927/markaltaweel_128.135.250.2426078596435714480072.zip ...
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-10 17:40:12,730 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-2] 2015-03-10 17:40:12,733 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1967
+ERROR [SwingWorker-pool-1-thread-2] 2015-03-10 17:40:13,279 repast.simphony.batch.ssh.SessionsDriver - Error while creating connection to markaltaweel@128.135.250.242
+com.jcraft.jsch.JSchException: verify: false
+	at com.jcraft.jsch.Session.connect(Session.java:309)
+	at com.jcraft.jsch.Session.connect(Session.java:162)
+	at repast.simphony.batch.ssh.SSHSessionFactory.create(SSHSessionFactory.java:74)
+	at repast.simphony.batch.ssh.RemoteSession.runModel(RemoteSession.java:259)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:67)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+INFO  [AWT-EventQueue-0] 2015-03-10 17:40:24,053 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:40:24,059 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-3] 2015-03-10 17:40:29,521 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2421078565759162754275.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426009227307/markaltaweel_128.135.250.2421078565759162754275.zip ...
+ERROR [SwingWorker-pool-1-thread-3] 2015-03-10 17:40:29,525 repast.simphony.batch.ssh.SessionsDriver - Error while creating connection to markaltaweel@128.135.250.242
+com.jcraft.jsch.JSchException: java.net.SocketException: Network is unreachable
+	at com.jcraft.jsch.Util.createSocket(Util.java:341)
+	at com.jcraft.jsch.Session.connect(Session.java:194)
+	at com.jcraft.jsch.Session.connect(Session.java:162)
+	at repast.simphony.batch.ssh.SSHSessionFactory.create(SSHSessionFactory.java:74)
+	at repast.simphony.batch.ssh.RemoteSession.copyFile(RemoteSession.java:141)
+	at repast.simphony.batch.ssh.RemoteSession.initModelArchive(RemoteSession.java:134)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:58)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.SocketException: Network is unreachable
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at com.jcraft.jsch.Util.createSocket(Util.java:335)
+	... 14 more
+INFO  [AWT-EventQueue-0] 2015-03-10 17:40:36,344 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 17:40:36,348 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:40:41,636 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2425487120264047792789.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426009239436/markaltaweel_128.135.250.2425487120264047792789.zip ...
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:42:01,018 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:42:01,018 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.3597
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:42:02,201 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@128.135.250.242
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 17:42:02,578 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 17:42:02,579 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_51-b13
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 17:42:02,579 repast.simphony.batch.ssh.SSHSession - )
+
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 17:42:02,580 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:42:03,332 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@128.135.250.242
+INFO  [SwingWorker-pool-1-thread-4] 2015-03-10 17:42:07,045 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@128.135.250.242 ...
+INFO  [pool-2-thread-1] 2015-03-10 17:43:10,592 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:44:11,729 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:45:12,859 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:46:13,999 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:47:15,136 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:48:16,269 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:49:17,401 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:50:18,537 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:51:19,676 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:52:20,815 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:53:22,391 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:54:23,568 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:55:24,760 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:56:26,014 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:57:27,208 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:58:28,403 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 17:59:29,542 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:00:30,682 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:01:31,817 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:02:33,024 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:03:34,161 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:04:35,290 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:05:36,424 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:06:37,645 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:07:38,781 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426009239436 on 128.135.250.242 for DONE: no
+ERROR [SwingWorker-pool-1-thread-4] 2015-03-10 18:09:28,791 repast.simphony.batch.ssh.SessionsDriver - Error while polling a remote for finish
+java.util.concurrent.ExecutionException: com.jcraft.jsch.JSchException: channel is not opened.
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at repast.simphony.batch.ssh.SessionsDriver.pollForDone(SessionsDriver.java:216)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:70)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: com.jcraft.jsch.JSchException: channel is not opened.
+	at com.jcraft.jsch.Channel.sendChannelOpen(Channel.java:670)
+	at com.jcraft.jsch.Channel.connect(Channel.java:151)
+	at com.jcraft.jsch.Channel.connect(Channel.java:145)
+	at repast.simphony.batch.ssh.SSHSession.executeCmd(SSHSession.java:153)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:51)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 3 more
+FATAL [Thread-7] 2015-03-10 18:32:57,762 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (0.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Transmission.Agent$$FastClassByCGLIB$$33f6c27b.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.util.NoSuchElementException
+	at java.util.ArrayList$Itr.next(ArrayList.java:834)
+	at Transmission.Agent.prestige(Agent.java:245)
+	at Transmission.Agent.encounter(Agent.java:221)
+	at Transmission.Agent.step(Agent.java:162)
+	... 10 more
+FATAL [Thread-7] 2015-03-10 18:34:18,571 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (0.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Transmission.Agent$$FastClassByCGLIB$$33f6c27b.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.util.NoSuchElementException
+	at java.util.ArrayList$Itr.next(ArrayList.java:834)
+	at Transmission.Agent.prestige(Agent.java:248)
+	at Transmission.Agent.encounter(Agent.java:221)
+	at Transmission.Agent.step(Agent.java:162)
+	... 10 more
+INFO  [AWT-EventQueue-0] 2015-03-10 18:44:28,377 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 18:44:28,552 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:44:36,153 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk7013203016044811736.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1426013073987/tcrnma3_unstan.arch.ucl.ac.uk7013203016044811736.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:45:42,515 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:45:42,518 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1422
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:45:42,854 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 18:45:42,986 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 18:45:43,028 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 18:45:43,028 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-10 18:45:43,029 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:45:43,899 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:45:45,975 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 18:46:48,629 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426013073987 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 18:47:49,648 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426013073987 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 18:54:30,082 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 18:54:30,246 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:54:37,577 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk3198383310044805409.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426013675386/maltaweel_altaweel.arch.ucl.ac.uk3198383310044805409.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:56:41,577 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:56:41,579 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 2.1032
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:56:41,765 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 18:56:42,685 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 18:56:42,685 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 18:56:42,685 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:56:42,780 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 18:56:44,834 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 18:57:47,060 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426013675386 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 19:56:25,516 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 19:56:25,677 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:56:33,574 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk698527996435487947.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426017391298/maltaweel_altaweel.arch.ucl.ac.uk698527996435487947.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:57:38,825 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:57:38,827 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1255
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:57:39,002 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 19:57:39,552 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 19:57:39,553 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 19:57:39,553 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:57:40,017 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:57:42,045 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 19:58:44,287 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426017391298 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-10 19:58:53,583 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 19:58:53,731 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 19:59:01,000 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2425493877408852867669.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1426017538810/markaltaweel_128.135.250.2425493877408852867669.zip ...
+INFO  [pool-2-thread-1] 2015-03-10 19:59:45,305 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426017391298 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 20:00:13,108 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 20:00:13,110 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.2383
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 20:00:14,461 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@128.135.250.242
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 20:00:15,218 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 20:00:15,219 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_51-b13
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 20:00:15,219 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread 128.135.250.242 session] 2015-03-10 20:00:15,219 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 20:00:15,609 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@128.135.250.242
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 20:00:18,924 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@128.135.250.242 ...
+INFO  [pool-2-thread-1] 2015-03-10 20:00:46,328 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426017391298 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 20:01:22,750 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426017538810 on 128.135.250.242 for DONE: no
+INFO  [pool-2-thread-1] 2015-03-10 20:01:47,349 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426017391298 on altaweel.arch.ucl.ac.uk for DONE: no
+ERROR [SwingWorker-pool-1-thread-1] 2015-03-10 20:28:22,523 repast.simphony.batch.ssh.SessionsDriver - Error while polling a remote for finish
+java.util.concurrent.ExecutionException: com.jcraft.jsch.JSchException: session is down
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:188)
+	at repast.simphony.batch.ssh.SessionsDriver.pollForDone(SessionsDriver.java:216)
+	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:70)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:466)
+	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:296)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at javax.swing.SwingWorker.run(SwingWorker.java:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: com.jcraft.jsch.JSchException: session is down
+	at com.jcraft.jsch.Channel.sendChannelOpen(Channel.java:667)
+	at com.jcraft.jsch.Channel.connect(Channel.java:151)
+	at com.jcraft.jsch.Channel.connect(Channel.java:145)
+	at repast.simphony.batch.ssh.SSHSession.executeCmd(SSHSession.java:153)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:51)
+	at repast.simphony.batch.ssh.RemoteDonePoller.call(RemoteDonePoller.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	... 3 more
+INFO  [AWT-EventQueue-0] 2015-03-10 21:39:40,775 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-10 21:39:40,951 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:39:48,759 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk7296918571240455501.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426023586540/maltaweel_altaweel.arch.ucl.ac.uk7296918571240455501.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:40:55,122 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:40:55,125 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1431
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:40:55,661 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 21:40:56,593 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 21:40:56,594 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-10 21:40:56,594 repast.simphony.batch.ssh.SSHSession - )
+Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:40:56,676 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-10 21:40:58,710 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-10 21:42:01,039 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426023586540 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-11 06:34:38,060 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-11 06:34:38,215 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:34:45,849 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk2322869886721949417.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426055683690/maltaweel_altaweel.arch.ucl.ac.uk2322869886721949417.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:35:51,566 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:35:51,568 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1313
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:35:51,747 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 06:35:52,482 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 06:35:52,484 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 06:35:52,485 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:35:52,762 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 06:35:54,875 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-11 06:36:57,172 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426055683690 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-11 06:37:58,191 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426055683690 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-11 06:38:59,208 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426055683690 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-11 06:40:00,223 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426055683690 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [pool-2-thread-1] 2015-03-11 06:41:01,242 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426055683690 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-11 07:02:58,596 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-11 07:02:58,773 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:03:06,725 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk5337432580674042171.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1426057384461/maltaweel_altaweel.arch.ucl.ac.uk5337432580674042171.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:04:15,026 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:04:15,028 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1761
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:04:16,148 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 07:04:16,513 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 07:04:16,513 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-11 07:04:16,513 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:04:17,165 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-11 07:04:20,197 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-11 07:05:22,429 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1426057384461 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 11:18:04,660 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 11:18:04,845 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:18:12,895 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk7934336281782606942.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1427282290589/maltaweel_altaweel.arch.ucl.ac.uk7934336281782606942.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:19:18,120 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:19:18,122 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1255
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:19:18,286 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:19:19,093 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:19:19,094 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:19:19,094 repast.simphony.batch.ssh.SSHSession - )
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:19:19,094 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:19:19,314 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:19:21,350 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-25 11:20:23,650 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282290589 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 11:23:08,230 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 11:23:08,381 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:23:16,065 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_nsit-dhcp-250-242.uchicago.edu1900995025629138645.zip to 
+	markaltaweel@nsit-dhcp-250-242.uchicago.edu:~/simphony_model_1427282593788/markaltaweel_nsit-dhcp-250-242.uchicago.edu1900995025629138645.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:24:27,953 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:24:27,956 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.2361
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:24:29,028 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@nsit-dhcp-250-242.uchicago.edu
+INFO  [Connect thread nsit-dhcp-250-242.uchicago.edu session] 2015-03-25 11:24:30,166 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread nsit-dhcp-250-242.uchicago.edu session] 2015-03-25 11:24:30,167 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_51-b13)
+INFO  [Connect thread nsit-dhcp-250-242.uchicago.edu session] 2015-03-25 11:24:30,167 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:24:30,176 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@nsit-dhcp-250-242.uchicago.edu
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:24:32,412 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@nsit-dhcp-250-242.uchicago.edu ...
+INFO  [pool-2-thread-1] 2015-03-25 11:25:35,942 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:26:37,064 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:27:38,189 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:28:39,310 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:29:40,431 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:30:41,555 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [pool-2-thread-1] 2015-03-25 11:31:42,679 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427282593788 on nsit-dhcp-250-242.uchicago.edu for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 11:40:58,810 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 11:40:59,000 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:41:06,899 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk4907558378885697076.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1427283664621/maltaweel_altaweel.arch.ucl.ac.uk4907558378885697076.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:42:14,290 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:42:14,292 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1611
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:42:14,462 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:42:15,331 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:42:15,331 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 11:42:15,354 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:42:15,479 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:42:17,507 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-25 11:43:19,780 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427283664621 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 11:59:34,220 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 11:59:34,399 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 11:59:42,083 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_altaweel.arch.ucl.ac.uk1027028638217425801.zip to 
+	maltaweel@altaweel.arch.ucl.ac.uk:~/simphony_model_1427284779809/maltaweel_altaweel.arch.ucl.ac.uk1027028638217425801.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:00:46,288 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:00:46,290 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1080
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:00:46,508 repast.simphony.batch.ssh.RemoteSession - Checking for java on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 12:00:47,076 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_45"
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 12:00:47,077 repast.simphony.batch.ssh.SSHSession - 
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 12:00:47,077 repast.simphony.batch.ssh.SSHSession - )
+
+INFO  [Connect thread altaweel.arch.ucl.ac.uk session] 2015-03-25 12:00:47,078 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:00:47,523 repast.simphony.batch.ssh.RemoteSession - Unzipping model on maltaweel@altaweel.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:00:49,554 repast.simphony.batch.ssh.RemoteSession - Running model on maltaweel@altaweel.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-25 12:01:51,800 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427284779809 on altaweel.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 12:03:14,332 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 12:03:14,494 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:03:22,100 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/tcrnma3_unstan.arch.ucl.ac.uk1546068709277256891.zip to 
+	tcrnma3@unstan.arch.ucl.ac.uk:~/simphony_model_1427284999779/tcrnma3_unstan.arch.ucl.ac.uk1546068709277256891.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:04:27,049 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:04:27,051 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.1212
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:04:27,208 repast.simphony.batch.ssh.RemoteSession - Checking for java on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-25 12:04:27,290 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_60"
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-25 12:04:27,303 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_60-b19
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-25 12:04:27,303 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread unstan.arch.ucl.ac.uk session] 2015-03-25 12:04:27,304 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:04:28,223 repast.simphony.batch.ssh.RemoteSession - Unzipping model on tcrnma3@unstan.arch.ucl.ac.uk
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:04:30,249 repast.simphony.batch.ssh.RemoteSession - Running model on tcrnma3@unstan.arch.ucl.ac.uk ...
+INFO  [pool-2-thread-1] 2015-03-25 12:05:32,480 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427284999779 on unstan.arch.ucl.ac.uk for DONE: no
+INFO  [AWT-EventQueue-0] 2015-03-25 12:18:51,320 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/NSF_Insect_Project/Transmission/output/config.props
+INFO  [AWT-EventQueue-0] 2015-03-25 12:18:51,479 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/NSF_Insect_Project/Transmission/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:18:58,918 repast.simphony.batch.ssh.RemoteSession - 
+	Copying /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/markaltaweel_128.135.250.2428302810035199030273.zip to 
+	markaltaweel@128.135.250.242:~/simphony_model_1427285936620/markaltaweel_128.135.250.2428302810035199030273.zip ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:20:11,489 repast.simphony.batch.ssh.RemoteSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:20:11,491 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 1.2478
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:20:12,534 repast.simphony.batch.ssh.RemoteSession - Checking for java on markaltaweel@128.135.250.242
+INFO  [Connect thread 128.135.250.242 session] 2015-03-25 12:20:13,716 repast.simphony.batch.ssh.SSHSession - java version "1.7.0_51"
+INFO  [Connect thread 128.135.250.242 session] 2015-03-25 12:20:13,717 repast.simphony.batch.ssh.SSHSession - Java(TM) SE Runtime Environment (build 1.7.0_51-b13
+INFO  [Connect thread 128.135.250.242 session] 2015-03-25 12:20:13,717 repast.simphony.batch.ssh.SSHSession - )
+INFO  [Connect thread 128.135.250.242 session] 2015-03-25 12:20:13,717 repast.simphony.batch.ssh.SSHSession - Java HotSpot(TM) 64-Bit Server VM (build 24.51-b03, mixed mode)
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:20:14,653 repast.simphony.batch.ssh.RemoteSession - Unzipping model on markaltaweel@128.135.250.242
+INFO  [SwingWorker-pool-1-thread-1] 2015-03-25 12:20:18,262 repast.simphony.batch.ssh.RemoteSession - Running model on markaltaweel@128.135.250.242 ...
+INFO  [pool-2-thread-1] 2015-03-25 12:21:21,655 repast.simphony.batch.ssh.RemoteDonePoller - Polled simphony_model_1427285936620 on 128.135.250.242 for DONE: no
+WARN  [AWT-EventQueue-0] 2015-06-28 21:38:51,416 repast.simphony.scenario.ObjectActionLoader - Error loading information from data. Continuing with model loading.
+com.thoughtworks.xstream.mapper.CannotResolveClassException: repast.simphony.visualization.engine.CartesianDisplayDescriptor
+	at com.thoughtworks.xstream.mapper.DefaultMapper.realClass(DefaultMapper.java:56)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.XStream11XmlFriendlyMapper.realClass(XStream11XmlFriendlyMapper.java:38)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.DynamicProxyMapper.realClass(DynamicProxyMapper.java:55)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.PackageAliasingMapper.realClass(PackageAliasingMapper.java:88)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.ClassAliasingMapper.realClass(ClassAliasingMapper.java:79)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.ArrayMapper.realClass(ArrayMapper.java:74)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.CachingMapper.realClass(CachingMapper.java:45)
+	at com.thoughtworks.xstream.core.util.HierarchicalStreams.readClassType(HierarchicalStreams.java:29)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.start(TreeUnmarshaller.java:133)
+	at com.thoughtworks.xstream.core.AbstractTreeMarshallingStrategy.unmarshal(AbstractTreeMarshallingStrategy.java:32)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1058)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1042)
+	at com.thoughtworks.xstream.XStream.fromXML(XStream.java:913)
+	at repast.simphony.scenario.ObjectActionLoader.performLoad(ObjectActionLoader.java:33)
+	at repast.simphony.scenario.AbstractActionLoader.loadAction(AbstractActionLoader.java:35)
+	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:90)
+	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:192)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:355)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)

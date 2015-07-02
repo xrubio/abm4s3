@@ -2,7 +2,6 @@
 <parameters>
 
 	<parameter name="randomSeed" displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
-	<parameter name="nAgents" displayName="nAgent" type="int" defaultValue="5" />
 	
 	<parameter name="xDim" displayName="xDim" type="int" 
 						defaultValue="30" 
@@ -18,6 +17,20 @@
 									
 		/>
 		
+		<parameter name="numberOfAgents" displayName="numberOfAgents" type="int" 
+						defaultValue="50" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
+		<parameter name="searchRadius" displayName="searchRadius" type="int" 
+						defaultValue="1" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+		
 		<parameter name="maxEnergy" displayName="maxEnergy" type="double" 
 						defaultValue="100" 
 						isReadOnly="false" 
@@ -25,10 +38,10 @@
 									
 		/>
 		
-		<parameter name="maxResource" displayName="maxResource" type="double" 
+		<parameter name="maxResource" displayName="maxResource" type="int" 
 						defaultValue="100" 
 						isReadOnly="false" 
-						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"							
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"							
 		/>
 		
 		<parameter name="decisionType" displayName="decisionType" type="String" defaultValue="greedy" />
@@ -36,14 +49,14 @@
 		<parameter name="memory" displayName="memory" type="boolean" defaultValue="false" />
 		
 		<parameter name="energyCost" displayName="energyCost" type="double" 
-						defaultValue="9.0" 
+						defaultValue="25.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 		
 		<parameter name="resourceGrowthRate" displayName="resourceGrowthRate" type="double" 
-						defaultValue="2.0" 
+						defaultValue="25.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									

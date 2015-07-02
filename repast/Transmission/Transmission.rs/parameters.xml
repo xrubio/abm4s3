@@ -5,7 +5,7 @@
 
 	<parameter name="nAgents" displayName="nAgent" type="int" defaultValue="50" />
 	
-	<parameter name="transmissionType" displayName="transmissionType" type="String" defaultValue="prestige" />
+	<parameter name="transmissionType" displayName="transmissionType" type="String" defaultValue="vertical" />
 		
 	<parameter name="nTraits" displayName="nTraits" type="int" defaultValue="3" />
 	
@@ -48,7 +48,7 @@
 		/>
 		
 		<parameter name="moveDistance" displayName="interactionRadius" type="double" 
-						defaultValue="1" 
+						defaultValue="3.0" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									

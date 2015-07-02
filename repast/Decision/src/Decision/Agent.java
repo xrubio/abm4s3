@@ -14,10 +14,12 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.parameter.Parameters;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
+import repast.simphony.query.space.grid.GridWithin;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
+import simphony.util.messages.MessageCenter;
 
 public class Agent {
 
@@ -44,7 +46,22 @@ public class Agent {
 	
 	/**The mental map of a space the agent has*/
 	double map[][];
+
+	/**Cell's resource growth rate*/
+	private Double cellResoureGrowthRate;
 	
+	/**The search radius for resources an agent wants*/
+	private int searchRadius;
+	
+	/**The cell in which the agent will consume from*/
+	private Cell consumeCell;
+	
+	/**Tick timestamp of when the agent was born*/
+	private double tickBorn=0;
+	
+	/**
+	 * 
+	 */
 	public Agent(){
 		
 	}
@@ -62,9 +79,11 @@ public class Agent {
 		//here the agent's attributes are being initialized
 		this.maxEnergy = (Double)p.getValue("maxEnergy");
 		this.energyCost = (Double)p.getValue("energyCost");
-		this.energy=this.maxEnergy/2.0;
+		this.cellResoureGrowthRate=(Double)p.getValue("resourceGrowthRate");
+		this.energy=this.maxEnergy*0.5;
 		this.decisionType =(String)p.getString("decisionType");
 		this.memory=(Boolean)p.getBoolean("memory");
+		this.searchRadius=(Integer)p.getInteger("searchRadius");
 		
 		this.space=space;
 		
@@ -77,46 +96,44 @@ public class Agent {
 	 * For cases where the agent is greedy, the agent moves to a neighbourhood based on a greedy desire.
 	 */
 	public void greedyMove(){
-		 List<GridCell<Object>> neighbourhood=getNeighbourhood();
-		 
-		 Cell cc=currentCell();
-		 double energyCell=cc.resource;
+	//	 List<GridCell<Object>> neighbourhood=getNeighbourhood();
+		List<Cell> neighbourhood=getNeighbourhood();
+		
+		 Cell cc=null;
+		 double energyCell=-10d;
 		 
 		 //iterate over the grid cells and find the one that fits the greedy desire
-		for(GridCell gc: neighbourhood){
+		for(Cell gc: neighbourhood){
 			
-			 Iterator<Object> gi = gc.items().iterator();
-			 while(gi.hasNext()){
-				 Object o = gi.next();
-				 
-				 if(o instanceof Cell){
-					 Cell c = (Cell)o;
-					 if(!memory){
-						 if(c.resource>energyCell){
-							energyCell=c.resource;
-							 cc=c;
+					if(!memory){
+						 if(gc.resource>energyCell){
+							energyCell=gc.resource;
+							 cc=gc;
+						 }
+						 if(gc.resource==energyCell){
+							 int ri=RandomHelper.nextIntFromTo(0, 1);
+							 if(ri==0)
+								 cc=gc;
 						 }
 					 }
 					 else{
-						 if(map[c.x][c.y]>energyCell){
-							 energyCell=map[c.x][c.y];
-							 cc=c;
+						 if(map[gc.x][gc.y]>energyCell){
+							 energyCell=map[gc.x][gc.y];
+							 cc=gc;
 						 }
 					 }		 
-				 }
-			 }
+	//			 }
+	//		 }
 		 }
 		 
-		 //once the cell is found, consume from it and move there
-		 consume(cc);
-		 grid.moveTo(this, cc.x,cc.y);
-		 space.moveTo(this, cc.x,cc.y);
+		//this will be the greedy cell to consume
+		this.consumeCell=cc;
 	}
 	
 	/**
-	 * The general step method that selects relevant scenario options to run. 
+	 * The general step method that selects which scenario and which cell to go to. 
 	 */
-	 @ScheduledMethod(start = 0, interval = 1,priority = ScheduleParameters.RANDOM_PRIORITY)
+	 @ScheduledMethod(start = 1, interval = 2,priority = ScheduleParameters.FIRST_PRIORITY,shuffle=false)
 	 public void step(){
 	 
 		 //here the conditionals control the options for which simulation type you want
@@ -139,45 +156,69 @@ public class Agent {
 				 probabilityMove();
 			 }
 		 }
+	 }
+	 
+	 /**
+	  * Chebshev distance calculation between two cells
+	  * @param c1 cell 1
+	  * @param c2 cell 2
+	  * @return the distance calculation
+	  */
+	 public double chebyshevDistance(Cell c1, Cell c2){
+		 double max = Math.abs(c1.x-c2.x);     
+	     double abs = Math.abs(c1.y-c2.y);
+	     
+	     if(abs > max) 
+	          max = abs;
+	        
+	      return max; 
+	 }
+	 
+	 /**
+	  * The second step of the model, where the agent will go to a chosen cell, consume energy,
+	  * reproduce, or die.
+	  */
+	 @ScheduledMethod(start = 2, interval = 2,priority = ScheduleParameters.FIRST_PRIORITY)
+	 public void stepTwo(){	
+		 
+		 if(this.tickBorn==RunEnvironment.getInstance().getCurrentSchedule().getTickCount())
+			 return;
+		 
+		 grid.moveTo(this, consumeCell.x,consumeCell.y);
+		 space.moveTo(this, consumeCell.x,consumeCell.y);
+		
+		 consume(consumeCell);
+				 
 		 if(this.maxEnergy==this.energy)
 			 reproduce();
 		 
 		 spendEnergy();
-		 
-		 if(this.energy<=0)
+		 if(this.energy<=0){
 			 RunState.getSafeMasterContext().remove(this);
-
+		 }
 	 }
 	 
 	 /**
 	  * A move based on probability of moving to an area based on resources in the area.
 	  */
 	 public void probabilityMove(){
-		 List<GridCell<Object>> neighbourhood=getNeighbourhood();
+		List<Cell> neighbourhood=getNeighbourhood();
 		 
-		 Iterator<GridCell<Object>> ic = neighbourhood.iterator();
-		 
+		
 		Map<Cell,Double>resourcesC=new HashMap<Cell,Double>();
 		
 		//iterate over the cells and move to the one based on a probability, which is based on its resources
 		 double energyCell=0;
-		 while(ic.hasNext()){
-			 GridCell<Object> gc = ic.next();
-			 
-			 Iterator<Object> gi = gc.items().iterator();
-			 while(gi.hasNext()){
-				 Object o = gi.next();
-				 if(o instanceof Cell){
-					 Cell c = (Cell)o;
-					 resourcesC.put(c, c.resource);
+		 for(Cell c: neighbourhood){
+			
+			 resourcesC.put(c, c.resource);
 					 
-					 if(!memory)
-						 energyCell+=c.resource;
-					 else
-						 energyCell+=map[c.x][c.y];
-				 }
-			 }
+			if(!memory)
+				energyCell+=c.resource;
+			else
+				energyCell+=map[c.x][c.y];		  
 		 }
+		 
 		 Cell chosen=currentCell();
 	
 		 double r=RandomHelper.nextDouble();
@@ -201,10 +242,10 @@ public class Agent {
 			 }
 				
 		 }
-		 
-		 consume(chosen);
-		 grid.moveTo(this, chosen.x,chosen.y);
-		 space.moveTo(this, chosen.x,chosen.y);
+		 this.consumeCell=chosen;
+	//	 consume(chosen);
+	//	 grid.moveTo(this, chosen.x,chosen.y);
+	//	 space.moveTo(this, chosen.x,chosen.y);
 	 }
 	 
 	 /**
@@ -223,50 +264,38 @@ public class Agent {
 				 break;
 			 }
 		 }
-		 
 		 return cc;
 	 }
 	 
 	 /**
 	  * Method to control how an agent remembers an area visited for resources in order to select it again.
 	  */
-	 public void memoryMechanism(){
-		 List<GridCell<Object>> neighbourhood=getNeighbourhood();
-		 
-		 for(GridCell<Object> gc: neighbourhood){
+	 public void memoryMechanism(){ 
+		 List<Cell> neighbourhood=getNeighbourhood();
+		 for(Cell gc: neighbourhood){
 			 
-			 Iterator<Object> gi = gc.items().iterator();
-			 
-			 while(gi.hasNext()){
-				 Object o = gi.next();
-				 if(o instanceof Cell){
-					 Cell c = (Cell)o;
-		
-					 map[c.x][c.y]=(c.resource+map[c.x][c.y])/2.0;
-					 break;
-				 }				 
-			}
-		}
+			map[gc.x][gc.y]=(gc.resource+map[gc.x][gc.y])/2.0;
+
+		}				 
 	 }
 	 
 	 /**
 	  * Method for consuming energy.
 	  * @param c
 	  */
-	 public void consume(Cell c){
-		 
+	 public void consume(Cell c){	
 		 //this simply removes energy from the cell and then gives that energy to the agent
 		 double energyDiff=this.maxEnergy-this.energy;
 		 
 		 double addEnergy=0;
-		 if(c.resource-energyDiff>0)
+		 if(c.resource>(this.maxEnergy-this.energy))
 			 addEnergy=energyDiff;
 		 
 		 else
 			 addEnergy=c.resource;
 		 
-		 c.resource=Math.max(0.0,c.resource-energyDiff);
-		 this.energy=Math.min(this.energy+addEnergy,100.0);
+		 c.resource=c.resource-addEnergy;
+		 this.energy=Math.min(this.energy+addEnergy,this.maxEnergy);
 	 }
 	 
 	 /**
@@ -277,8 +306,8 @@ public class Agent {
 		
 		 //here another agent is created then half the energy is given to that agent and the other half is kept by the agent reproducing
 		 Agent agent = new Agent(this.space,this.grid);
-		 agent.energy=this.energy/2.0;
-		 this.energy=this.energy/2.0;
+		 agent.tickBorn=RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
+		 this.energy=this.maxEnergy*0.5;
 		 Context context =RunState.getSafeMasterContext();
 		 context.add(agent);
 		
@@ -291,23 +320,33 @@ public class Agent {
 	  * Energy spent at each tick.
 	  */
 	 public void spendEnergy(){
-		 this.energy=Math.max(0.0,this.energy-this.energyCost);
+		 this.energy=this.energy-this.energyCost;
 	 }
 	 
 	 /**
 	  * The neighbourhood surrounding the cells of choice
 	  * @return a list of the neighbourhood
 	  */
-	 public List<GridCell<Object>> getNeighbourhood(){
-			
-		 //This method gets the cells around an agent (usina Moore neighbourhood)
+	 	public List<Cell> getNeighbourhood(){
+	 		
 			GridPoint pt = grid.getLocation(this);
+			Cell c = currentCell();
 			
-			 GridCellNgh<Object> nghCreator = new GridCellNgh<Object>(grid, pt,
-					   Object.class, 1,1);
-			List<GridCell<Object>> gridCells = nghCreator.getNeighborhood(true);
+			Context context = RunState.getInstance().getMasterContext();
+			Iterator<Cell> ii = context.getObjects(Cell.class).iterator();
 			
-			return gridCells;
+			List<Cell> cells = new ArrayList<Cell>();
+			while(ii.hasNext()){
+				Cell cc = ii.next();
+				
+				if(chebyshevDistance(c,cc)<=(double)this.searchRadius  && !cells.contains(cc)){
+					cells.add(cc);
+				}
+			}
+			
+	//		space.getObjectAt(location)
+			
+			return cells;
 		}
 
 
@@ -319,7 +358,30 @@ public class Agent {
 	public void setEnergy(Double energy) {
 		this.energy = energy;
 	}
-	
+
+	public double getEnergyCost() {
+		return energyCost;
+	}
+
+	public void setEnergyCost(double energyCost) {
+		this.energyCost = energyCost;
+	}
+
+	public Double getCellResoureGrowthRate() {
+		return cellResoureGrowthRate;
+	}
+
+	public void setCellResoureGrowthRate(Double cellResoureGrowthRate) {
+		this.cellResoureGrowthRate = cellResoureGrowthRate;
+	}
+
+	public int getSearchRadius() {
+		return searchRadius;
+	}
+
+	public void setSearchRadius(int searchRadius) {
+		this.searchRadius = searchRadius;
+	}
 	
  }
 

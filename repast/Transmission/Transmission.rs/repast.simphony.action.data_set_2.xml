@@ -1,6 +1,7 @@
 <repast.simphony.data2.engine.DataSetDescriptor>
-  <name>A Data Set</name>
-  <type>AGGREGATE</type>
+  <name>New Data Set</name>
+  <type>NON_AGGREGATE</type>
+  <sourceType>Transmission.Agent</sourceType>
   <inclTick>true</inclTick>
   <inclBatchRun>false</inclBatchRun>
   <inclRandomSeed>false</inclRandomSeed>
@@ -11,19 +12,20 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-291240203</hashCode>
+    <hashCode>-1007617260</hashCode>
   </scheduleParams>
   <atEnd>false</atEnd>
-  <methodDataSources class="linked-hash-map"/>
-  <countSources class="linked-hash-map">
+  <methodDataSources class="linked-hash-map">
     <entry>
-      <string>Traits</string>
-      <repast.simphony.data2.engine.CountSourceDefinition>
-        <typeName>Transmission.Agent</typeName>
-        <id>Traits</id>
-      </repast.simphony.data2.engine.CountSourceDefinition>
+      <string>CulturalTraits</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>CulturalTraits</id>
+        <className>Transmission.Agent</className>
+        <methodName>getCulturalTraits</methodName>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
     </entry>
-  </countSources>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
   <customNADataSources class="linked-hash-map"/>
   <customAggDataSources class="linked-hash-map"/>
 </repast.simphony.data2.engine.DataSetDescriptor>
