@@ -76,11 +76,6 @@ class BaseAgent:
 
     def spendEnergy(self):
         self.energy -= self.energyCost
-        self.checkDeath()
-
-    def checkDeath(self):
-        if self.energy <= 0:
-            self.agents.remove(self)
 
     def __str__(self):
         content = 'agent pos:'+str(self.pos)+' energy:'+str(self.energy)
@@ -227,6 +222,9 @@ def run(params):
         BaseAgent.agents += BaseAgent.newAgents
         for agent in BaseAgent.agents:
             agent.spendEnergy()
+       
+        # remove agents without energy
+        BaseAgent.agents[:] = [agent for agent in BaseAgent.agents if agent.energy>0]
         BaseAgent.newAgents = list()
         resources.step()
         output.write(str(params.numRun)+';'+str(params.radius)+';'+str(i)+';'+str(len(BaseAgent.agents))+'\n')
