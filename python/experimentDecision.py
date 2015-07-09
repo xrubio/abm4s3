@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import decision, random
-from scipy import arange
 
 def equilibrium():
     params = decision.Params()
@@ -32,7 +31,7 @@ def equifinality():
     for i in range(repetitions):
         print('run:',i,'from:',repetitions)
         params.numRun = i
-        params.nAgents = random.randint(1,500)
+        params.nAgents = random.randint(1,200)
         decision.run(params)
 
 def multifinality():    
@@ -68,11 +67,11 @@ def singleRun():
 
 def exploreRadius():
     repetitions = 1000
-    radiusValues = arange(1,31)
+    radiusValues = range(1,31)
     numRuns = repetitions*len(radiusValues)
     numRun = 0
     for i in radiusValues:
-        for j in arange(repetitions):
+        for j in range(repetitions):
             params = decision.Params()
             params.oneFile = False 
             params.nSteps = 5001
@@ -90,7 +89,7 @@ def exploreRadius():
             numRun += 1
 
 def main():
-    singleRun()
+    equifinality()
 
 if __name__ == "__main__":
     main()
