@@ -84,7 +84,8 @@ end
 to reproduce
   ;; agent reproduces by cloning if it reaches maxEnergy
   let originalEnergy energy
-    hatch 1 [ ;; agent clones self; offspring moves to another patch
+    hatch 1 [ ;; agent clones self
+      ;move-to one-of search-patches; offspring moves to another patch
       set energy originalEnergy / 2 ;; agent offsprint/clone gets half of original agent energy
     ]
     set energy originalEnergy / 2 ;; reduce agent energy to half original amount (because other half went to offspring)
@@ -142,8 +143,8 @@ SLIDER
 nAgents
 nAgents
 1
-100
-10
+200
+50
 1
 1
 NIL
@@ -743,6 +744,36 @@ NetLogo 5.2.0
     </enumeratedValueSet>
     <enumeratedValueSet variable="nAgents">
       <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="searchRadius">
+      <value value="1"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="decision-making_experiment5" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks</metric>
+    <metric>count agents</metric>
+    <metric>mean [energy] of agents</metric>
+    <enumeratedValueSet variable="maxEnergy">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="resourceGrowthRate">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="energyCost">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="timeSteps">
+      <value value="1000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nAgents">
+      <value value="1"/>
+      <value value="10"/>
+      <value value="30"/>
+      <value value="50"/>
+      <value value="70"/>
+      <value value="90"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="searchRadius">
       <value value="1"/>
