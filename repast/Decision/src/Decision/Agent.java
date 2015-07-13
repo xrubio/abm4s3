@@ -300,7 +300,7 @@ public class Agent {
 	 
 	 /**
 	  * Simple reproduction based on using energy.
-	  * The agent uses 1/2 their energy to reproduce and give the new agent 1/2 their energy.
+	  * The agent uses 1/2 their energy to reproduce and gives the new agent 1/2 their energy.
 	  */
 	 public void reproduce(){
 			
