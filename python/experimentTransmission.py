@@ -15,22 +15,22 @@
 
 #!/usr/bin/python3
 
-import socialLearning, random
+import transmission, random
 
 def singleRun():  
-    params = socialLearning.Params()
+    params = transmission.Params()
     params.transmissionType = 'prestige'
     params.nAgents = 30
     params.nSteps = 100
     params.output = 'output.csv'
     params.oneFile = False 
-    socialLearning.run(params)
+    transmission.run(params)
 
 def experiment():
     numRuns = 100
     transmissionTypeSweep = ['vertical','encounter','prestige','conformist']
     
-    params = socialLearning.Params()
+    params = transmission.Params()
     params.xDim = 10
     params.yDim = 10
     params.replacementRate = 0.1
@@ -55,7 +55,7 @@ def experiment():
             params.nAgents = random.randint(50,500)
             params.output = 'output_tr_'+str(params.numRun)+'.csv'
             totalRuns += 1
-            socialLearning.run(params)
+            transmission.run(params)
 
 def main():
     singleRun()
