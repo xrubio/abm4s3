@@ -351,7 +351,7 @@ If the energy level of an agent declines to 0, the agent dies.
 
 ## HOW TO USE IT
 
-Set the parameters described above. Press the 'Setup' button to initialize the environment and place the agents in the environment. Press the 'Go' button, Pressing the 'Step' button will advance the model one tick. The timeSteps entry field allows the user to stop the model running after a predetermined number of ticks. Setting this field to 0 allows the model to run indefinitely, until the user presses 'Go' again. 
+Set the parameters described above. Press the 'Setup' button to initialize the environment and place the agents in the environment. Press the 'Run' button, Pressing the 'Step' button will advance the model one tick. The timeSteps entry field allows the user to stop the model running after a predetermined number of ticks. Setting this field to 0 allows the model to run indefinitely, until the user presses 'Go' again. 
 
 ## THINGS TO NOTICE
 

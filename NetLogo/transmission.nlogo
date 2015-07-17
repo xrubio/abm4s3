@@ -1,7 +1,7 @@
 ;; define variables
-globals [nTraits traitRange moveDistance colorRange simpson outFile stopnow] ;; number of traits an agent can possess, number of values that a trait can have,
+globals [nTraits traitRange moveDistance colorRange simpson stopnow] ;; number of traits an agent can possess, number of values that a trait can have,
   ;; rate at which agents reproduce (an agent will die for each new one hatched), distance an agent moves each time step, 256/traitRange for setting
-  ;; agent colors, Simpson divesity index, name and path of output csv file, stop simulation flag
+  ;; agent colors, Simpson divesity index, stop simulation flag
 
 breed [agents agent] ;; plural and singular form of agent referent
 agents-own [traits] ;; information that can be transmitted. Stored as list with "nTraits" items, where each place can take up to "traitRange" values (0-traitRange)
@@ -15,21 +15,9 @@ to setup
   set traitRange 5 ;; number of values that a trait can take
   set moveDistance 1 ;; distance an agent can move each time step
   set colorRange round (256 / traitRange) ;; 256 grey shades / traitRange - used to set agent color
-  set outFile "" ;; variable holding name of file to save csv of output
   if timeSteps = "" [set timeSteps 0] ;; change empty max tick limit entry into an integer
   if randomAgents [set nAgents random 450 + 50]
   create_agents
-  if saveOutput [
-    ;; routine to allow user to select file for csv output
-    set outFile user-new-file ;; call user dialog to select output file and output file directory
-    if outFile [
-      if file-exists? outFile [ ;; overwrite file with existing name
-        file-close-all
-        file-delete outFile]
-      file-open outFile ;; open output file so that data can be added periodally
-      file-type "agent" file-type "," file-type "timestep" file-type "," file-print "traits" ;; headers for csv file
-      ]
-    ]
   reset-ticks ;; start time steps ("ticks") at 0
 end
 
@@ -66,7 +54,6 @@ to go
   ]
   tick ;; increment time step counter
   update-plots
-  if saveOutput and ticks mod outputInterval = 0 [output] ;; add agent information to output csv file
   if timeSteps > 0 and ticks >= timeSteps [summarize]  ;; do summary statistics and stop simulation if time steps exceed timeSteps value
   if stopnow [stop]
 end
@@ -184,19 +171,6 @@ to summarize
 
   set stopnow true ; stop simulation
 end
-
-to output
-  ;; output information about each agent to csv file for each time step or time step interval
-  
-  ask agents [
-    file-type who file-type "," file-type ticks file-type "," file-print traits ;; information about each agent to output (agent ID, time step, trait list)
-  ]
-  if timeSteps > 0 and ticks >= timeSteps [
-    file-close ;; close output file if simulation stops
-    set stopnow true ;; stop simulation if time steps (ticks) reaches value of timeSteps
-  ]
-
-end
 @#$#@#$#@
 GRAPHICS-WINDOW
 475
@@ -227,34 +201,34 @@ ticks
 
 CHOOSER
 5
-10
+90
 143
-55
+135
 transmissionType
 transmissionType
 "vertical" "unbiased" "prestige" "conformist"
-3
+0
 
 SLIDER
 5
-75
+10
 145
-108
+43
 nAgents
 nAgents
 1
 100
-236
+287
 1
 1
 NIL
 HORIZONTAL
 
 SLIDER
-5
-110
-145
-143
+155
+75
+295
+108
 innovationRate
 innovationRate
 0
@@ -266,10 +240,10 @@ NIL
 HORIZONTAL
 
 BUTTON
-300
-15
-362
-48
+390
+10
+452
+43
 setup
 setup
 NIL
@@ -283,10 +257,10 @@ NIL
 1
 
 BUTTON
-375
-15
-438
-48
+390
+50
+453
+83
 run
 go
 T
@@ -319,9 +293,9 @@ PENS
 
 SLIDER
 5
+140
 145
-145
-178
+173
 interactionRadius
 interactionRadius
 1
@@ -368,37 +342,11 @@ false
 PENS
 "trait-2" 1.0 1 -13345367 true "" "histogram [item 2 traits] of agents"
 
-SWITCH
-150
-110
-290
-143
-saveOutput
-saveOutput
-1
-1
--1000
-
-SLIDER
-150
-145
-290
-178
-outputInterval
-outputInterval
-1
-1000
-1
-1
-1
-NIL
-HORIZONTAL
-
 INPUTBOX
-300
-105
-452
-165
+155
+115
+295
+175
 timeSteps
 1000
 1
@@ -406,10 +354,10 @@ timeSteps
 Number
 
 SWITCH
-150
-75
-290
-108
+5
+50
+145
+83
 randomAgents
 randomAgents
 0
@@ -417,20 +365,20 @@ randomAgents
 -1000
 
 MONITOR
-300
-55
-392
-100
-initial agents
-nAgents
+365
+135
+455
+180
+total agents
+count agents
 0
 1
 11
 
 INPUTBOX
-150
+155
 10
-290
+295
 70
 replacementRate
 0.1
@@ -438,42 +386,75 @@ replacementRate
 0
 Number
 
+BUTTON
+390
+90
+453
+123
+Step
+go
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+This models exemplifies information transmission and learning in small-scale societies. It simulates vertical transmission (from parent to offspring), as well as three kinds of horizontal transmission: unbiased, prestige-based, and conformist. It is one of two models that accompany the paper:
+
+Rubio-Campillo, Xavier, Mark Altaweel, C. Michael Barton, and Enrico R. Crema (in press) Understanding Small-Scale Societies with Agent-Based Models: Theoretical Examples of Cultural Transmission and Decision-Making. Ecology and Society
+
+For the paper, both models have been coded in four popular platforms: NetLogo (here), Repast, R, and Python. 
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+Each agent posesses 3 different traits (numbered as traits 0, 1, and 2), each of which can have 5 possible values (0-4). For vertical transmission, a parent will transmit all of its trait configurations (i.e., the value for each of the 3 traits) to its offspring. There is a possibility that the offspring will change one of these values. The probability that this will happen is set by the user at the beginning of the simulation with the 'innovationRate' slider.
+
+For each of the 3 types of horizontal transmission, an agent identifies a 'teacher' agent within a neighborhood set by the user with the 'interactionRadius' slider at the beginning of the simulation. The agent will then copy the value of 1 trait from the selected teacher. The innovationRate is the probability that, instead of copying from a teacher, an agent will randomly select a new value for the trait in question. 
+
+For unbiased transmission, an agent will select a teacher randomly from the other agents within its interaction radius. The agent will then randomly select a trait and copy its value from the teacher.
+
+For conformist, an agent will select a teacher within its interation radius that has the most common value for one (randomly selected) trait. The agent will then copy that value for its corresonding trait.
+ 
+For prestige, an agent will select as a teacher an agent within the interation radius who has the highest value for trait 0. The agent will then copy the value of a randomly selected trait from the teacher. 
+
+The 'replacement rate' entry field allows the user to set a probability that 1 agent will die and a new one born (a randomly selected agent will clone itself) each model tick. An agent's traits convey no selective value or penalty. They do not affect the chance of death or reproduction. The population of agents remains stable at the initial value set by the user.
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+Set the parameters described above. Press the 'Setup' button to initialize the environment and place the agents in the environment. Press the 'Run' button, Pressing the 'Step' button will advance the model one tick. The timeSteps entry field allows the user to stop the model running after a predetermined number of ticks. Setting this field to 0 allows the model to run indefinitely, until the user presses 'Go' again. 
 
 ## THINGS TO NOTICE
 
-(suggested things for the user to notice while running the model)
+The colors of the agents indicate their different trait values. When all agents have the same color, they have the same trait values. The bar graphs show the number of agents who posess each value for each trait. 
+
 
 ## THINGS TO TRY
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
+Which transmission modes and other parameters better maintain variability in traits and which rapidly lead to all agents posessing identical traits?
 
 ## EXTENDING THE MODEL
 
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
+
 
 ## NETLOGO FEATURES
 
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
+
 
 ## RELATED MODELS
 
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+As part of the package that contains this published model, there are versions of the same model coded in Repast, Python, and R. There is also a related model of information transmission, also coded in NetLogo, Repast, Python, and R.
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+(c) C. Michael Barton, Arizona State University
+This model is licenced under the GNU General Public License v. 3
 @#$#@#$#@
 default
 true
