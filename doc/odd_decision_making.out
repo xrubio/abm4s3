@@ -1,0 +1,28 @@
+\BOOKMARK [1][-]{section.1}{Purpose}{}% 1
+\BOOKMARK [1][-]{section.2}{Entities, state variables, and scales}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Agents}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Environment}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Process overview and scheduling}{}% 5
+\BOOKMARK [1][-]{section.4}{Design concepts}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Basic principles}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Emergence}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Adaptation}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{Objectives}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.5}{Learning}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.6}{Prediction}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.7}{Sensing}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.8}{Interaction}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.9}{Stochasticity}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.10}{Collectives}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.11}{Observation}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Initialization}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Agents}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Environment}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Input data}{}% 21
+\BOOKMARK [1][-]{section.7}{Submodels}{}% 22
+\BOOKMARK [2][-]{subsection.7.1}{Decision making}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.2}{Collection}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.3}{Cloning}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.4}{Energy expenditure}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.5}{Resource growth}{section.7}% 27
+\BOOKMARK [1][-]{section.8}{References}{}% 28

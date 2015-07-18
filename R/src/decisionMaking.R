@@ -66,7 +66,13 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                     {
                         parents=which(agents$energy==maxEnergy)
                         agents$energy[parents]=maxEnergy/2
-                        agents<-rbind(agents,agents[parents,])
+                        offspring=agents[parents,]
+                        ##If enabled the following line ensures random displacement of offspring on adjacent cell#
+                        ##offspring=t(apply(offspring,1,function(x,xLimit,yLimit,radius=1)
+                        ##    {return(as.numeric(c(x[1],randomNeighbour(x[2],x[3],xLimit,yLimit,radius=radius))))},
+                        ##    xLimit=c(1,dimX),yLimit=c(1,dimY)))
+                        offspring$energy = offspring$energy + energyCost #add to the offpsring energy cost so they don't spend
+                        agents<-rbind(agents,offspring)
                     }
 
                 #STEP 3: Spend Energy#
@@ -142,3 +148,17 @@ neighbourhood<-function(xcor,ycor,xLimit,yLimit,resourceMatrix,radius)
     }
 }
 
+randomNeighbour<-function(xcor,ycor,xLimit,yLimit,radius)
+    {
+        step=-radius:radius
+        xcor1=xcor+step
+        ycor1=ycor+step
+        address=expand.grid(x=xcor1,y=ycor1)
+
+        if(sum((address$x<xLimit[1]|address$x>xLimit[2]),na.rm=TRUE)>0){address[which(address$x<xLimit[1]|address$x>xLimit[2]),]=NA}
+        if(sum((address$y<yLimit[1]|address$y>yLimit[2]),na.rm=TRUE)>0){address[which(address$y<yLimit[1]|address$y>yLimit[2]),]=NA}
+
+        address[which(address[,1]==xcor&address[,2]==ycor),]=NA
+        finaladdress=address[sample(which(!is.na(address[,1])),size=1),]
+        return(finaladdress)
+    }
