@@ -1,22 +1,22 @@
 ###############################################################
-# ~Decision Making Model~
-# by enrico.crema@gmail.com                                       
-#                                        
-# Parameters:                                       
-# dimX ::: x limit of the world (note that this will be the rows in the resource matrix)
-# dimY ::: y limit of the world (note that this will be the columns in the resource matrix)
-# nAgents ::: Number of agents at initialisation                                        
-# nSteps ::: Number of timesteps in the model
-# resourceGrowthRate ::: Amount increase of resources per timeStep
-# maxEnergy ::: maximum possible storable energy. Also maximum possible cell values in the resource scape. 
-# energyCost ::: ammount of enegry spent by each agent each timestep.
-# radius ::: Search Neighbouhood (in Chebyshev distance)
-# verbose ::: If set to TRUE shows a progress bar
-# plot ::: If se to TRUE plots population size and agent location in the resourcescape
+## ~Decision Making Model~
+## by enrico.crema@gmail.com                                       
+##                                        
+## Parameters:                                       
+## dimX ::: x limit of the world (note that this will be the rows in the resource matrix)
+## dimY ::: y limit of the world (note that this will be the columns in the resource matrix)
+## nAgents ::: Number of agents at initialisation                                        
+## nSteps ::: Number of timesteps in the model
+## resourceGrowthRate ::: Amount increase of resources per timeStep
+## maxEnergy ::: maximum possible storable energy. Also maximum possible cell values in the resource scape. 
+## energyCost ::: ammount of enegry spent by each agent each timestep.
+## radius ::: Search Neighbouhood (in Chebyshev distance)
+## verbose ::: If set to TRUE shows a progress bar
+## plot ::: If se to TRUE plots population size and agent location in the resourcescape
 
 
 
-#nAgents=10;energyCost=25;maxEnergy=100;resourceGrowthRate=25;nSteps=100;dimX=30;dimY=30;plot=FALSE;verbose=FALSE
+##nAgents=10;energyCost=25;maxEnergy=100;resourceGrowthRate=25;nSteps=100;dimX=30;dimY=30;plot=FALSE;verbose=FALSE
 
 main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                nSteps=100,dimX=30,dimY=30,
@@ -26,17 +26,17 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
         resource=matrix(round(runif(dimX*dimY,0,maxEnergy)),nrow=dimX,ncol=dimY) #initialise resourceScape
         maxResource=resource #maximum possible resource value per cell
 
-        #initialise agents as a data.frame:
+        ##initialise agents as a data.frame:
         agents=data.frame(energy=rep(maxEnergy/2,nAgents),
             x=ceiling(runif(nAgents,0,dimX)),y=ceiling(runif(nAgents,0,dimX)))
 
-        #Start of the actual simulation#
+        ##Start of the actual simulation#
         if(verbose==TRUE){pb <- txtProgressBar(min = 1, max = nSteps, style = 3)}
 
         for (t in 1:nSteps)
             {
 
-                #STEP 1: Agents Move to the cell with highest energy within its neighbourhood#              
+                ##STEP 1: Agents Move to the cell with highest energy within its neighbourhood#              
                 for (a in 1:nrow(agents))
                             {
     
@@ -45,7 +45,7 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                                                   resourceMatrix=resource,radius=radius)                             
                             }
                 
-                #STEP 2: Agents Collect Energy from current cell, after randomising order of exectution      
+                ##STEP 2: Agents Collect Energy from current cell, after randomising order of exectution      
                 
                 newOrder=sample(1:nrow(agents)) 
                 agents=agents[newOrder,]  #shuffle agent order
@@ -61,24 +61,20 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                             }
                 
               
-                #STEP 3: Agents make a copy of themselves if their energy is equal to maxEnergy
+                ##STEP 3: Agents make a copy of themselves if their energy is equal to maxEnergy
                 if(any(agents$energy==maxEnergy))
                     {
                         parents=which(agents$energy==maxEnergy)
                         agents$energy[parents]=maxEnergy/2
                         offspring=agents[parents,]
-                        ##If enabled the following line ensures random displacement of offspring on adjacent cell#
-                        ##offspring=t(apply(offspring,1,function(x,xLimit,yLimit,radius=1)
-                        ##    {return(as.numeric(c(x[1],randomNeighbour(x[2],x[3],xLimit,yLimit,radius=radius))))},
-                        ##    xLimit=c(1,dimX),yLimit=c(1,dimY)))
-                        offspring$energy = offspring$energy + energyCost #add to the offpsring energy cost so they don't spend
+                        offspring$energy = offspring$energy + energyCost #add extra energy to keep the offspring energy value after next step
                         agents<-rbind(agents,offspring)
                     }
 
-                #STEP 3: Spend Energy#
+                ##STEP 3: Spend Energy#
                 agents$energy=agents$energy-energyCost
 
-                #STEP 4: Death#
+                ##STEP 4: Death#
                 if(any(agents$energy<=0))
                     {
                       death=which(agents$energy<=0)
@@ -91,16 +87,16 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                        agents=agents[-death,]                     
                     }
 
-                #STEP 5: Resource Growth#
+                ##STEP 5: Resource Growth#
                                        
                 resource=resource+resourceGrowthRate
                 index=which((resource-maxResource)>0,arr.ind=TRUE)
                 resource[index]=maxResource[index]
 
-                #Record Population Size:
+                ##Record Population Size:
                 population[t]=nrow(agents)
                 
-                #Optional Plot Function#
+                ##Optional Plot Function#
                 if(plot==TRUE)
                     {
                         par(mfrow=c(1,2))
@@ -119,7 +115,7 @@ main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
 
 
 
-#utility functions #
+###utility functions###
 neighbourhood<-function(xcor,ycor,xLimit,yLimit,resourceMatrix,radius)
 {
     step=-radius:radius

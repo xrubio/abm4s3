@@ -1,26 +1,21 @@
 ###############################################################
-# ~Cultural Transmission Model~
-# by enrico.crema@gmail.com                                       
-#     
-# Parameters:  
-# nAgents ::: Number of Agents
-# transmissionType :::  Transmission mode one between {"vertical","encounter","prestige","conformist"}
-# nTraits ::: Number of slots in the vector of cultural traits
-# nTraitRange ::: Range of possible integer values that can be stored
-# xDim ::: dimension of the world (x-coordinate)
-# yDim ::: dimension of the world (y-coordinate)
-# replacementRate ::: rate of population replacement (only for "vertical" transmission mode)
-# timeSteps ::: number of simulation time-steps
-# innovationRate ::: rate of innovation
-# interactionRadius ::: interaction distance (euclidean distance)
-# moveDistance ::: movement distance (euclidean distance)
-# verbose ::: If set to TRUE shows a progress bar
-# plot ::: If set to TRUE plots the population level diversity index,agents location, and traits (using rgb values)
-
-
-
-#nTraitRange=c(0,1,2,3,4);nTraits=3;nAgents=100;xDim=10;yDim=10;timeSteps=1000;innovationRate=0.01;replacementRate=0.1;interactionRadius=1;moveDistance=1
-
+## ~Cultural Transmission Model~
+## by enrico.crema@gmail.com                                       
+##     
+## Parameters:  
+## nAgents ::: Number of Agents
+## transmissionType :::  Transmission mode one between {"vertical","encounter","prestige","conformist"}
+## nTraits ::: Number of slots in the vector of cultural traits
+## nTraitRange ::: Range of possible integer values that can be stored
+## xDim ::: dimension of the world (x-coordinate)
+## yDim ::: dimension of the world (y-coordinate)
+## replacementRate ::: rate of population replacement (only for "vertical" transmission mode)
+## timeSteps ::: number of simulation time-steps
+## innovationRate ::: rate of innovation
+## interactionRadius ::: interaction distance (euclidean distance)
+## moveDistance ::: movement distance (euclidean distance)
+## verbose ::: If set to TRUE shows a progress bar
+## plot ::: If set to TRUE plots the population level diversity index,agents location, and traits (using rgb values)
 
 
 main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
@@ -29,15 +24,15 @@ main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
                innovationRate=0.01,plotSim=TRUE,verbose=TRUE)
     {
         require(vegan)
-        #define a list where the agents traits are stored
+        ##define a list where the agents traits are stored
         rawTraitsList=vector("list",length=timeSteps)
-        #define a vector where the diversity values of each timestep is stored
+        ##define a vector where the diversity values of each timestep is stored
         diversitySequence=numeric(length=timeSteps)
         
-        #Initialise Agents as data.frame:
-        #Random Traits
+        ##Initialise Agents as data.frame:
+        ##Random Traits
         Agents=as.data.frame(matrix(sample(nTraitRange,size=nTraits*nAgents,replace=TRUE),nrow=nAgents,ncol=nTraits))
-        #Random Location
+        ##Random Location
         Agents$x=runif(nAgents,0,xDim)
         Agents$y=runif(nAgents,0,yDim)
 
@@ -45,14 +40,14 @@ main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
 
         for (t in 1:timeSteps)
             {
-                #move agents
+                ##move agents
                 Agents[,c(nTraits+1,nTraits+2)]=t(apply(Agents[,c(nTraits+1,nTraits+2)],1,
                           function(x,y,xDim,yDim)
                               {
                                   return(move(coordinate=x[c(1,2)],moveDistance=y,xDim=xDim,yDim=yDim))
                               },y=moveDistance,xDim=xDim,yDim=yDim))
 
-                #Social Learning
+                ##Social Learning
 
                 ############Vertical Transmission###########
                 if (transmissionType=="vertical")
@@ -64,14 +59,14 @@ main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
                             {   
                                 newAgents=Agents[reproduce,] #store offspring
                                 
-                                        #innovation:
+                                        ##innovation:
                                 innovationIndex=which(runif(nrow(newAgents))<innovationRate) #index of innovators
                                 if (length(innovationIndex)>0) #if innovation happens
                                     {
                                         newAgents[innovationIndex,sample(1:nTraits,size=1)]=sample(nTraitRange,size=1)
                                     }
                             }
-                                        #Update Agents:
+                                        ##Update Agents:
                         if (length(dead)>0){Agents=Agents[-dead,]} #kill agents
                         if (length(reproduce)>0){Agents=rbind(Agents,newAgents)} #add new agents     
                     }
@@ -137,11 +132,11 @@ main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
                     }
       
                 rownames(Agents)=1:nrow(Agents)
-                 #plot function
                 
-                #store output
-                #rawTraitsList[[t]]=as.character(apply(Agents[,1:3],1,paste,collapse=""))
+                ##store output
                 diversitySequence[t]=diversity(table(as.character(apply(Agents[,1:3],1,paste,collapse=""))),"simpson")
+                ##plot function
+
                 if(plotSim==TRUE)
                     {
                         par(mfrow=c(1,2))
@@ -158,12 +153,6 @@ main<-function(nAgents=100,xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
             }
 
              if(verbose==TRUE){close(pb)}
-
-        #final matrix output
-        #variants=unique(unlist(rawTraits))
-        #rawMatrix=t(sapply(1:timeSteps,function(x,rawTraitsList,variants){return(instances(rawTraits[[x]],variants=variants))},rawTraitsList=rawTraitsList,variants=variants,simplify="matrix"))
-
-        #output=apply(rawMatrix,1,diversity,"simpson")
         output=diversitySequence
         return(output)
     }
