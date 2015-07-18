@@ -1,7 +1,21 @@
+#
+# Copyright (c) 2015 - Xavier Rubio-Campillo 
+# This file is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version
+#
+# The source code is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#   
+# You should have received a copy of the GNU General Public 
+# License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+
 #!/usr/bin/python3
 
 import decision, random
-from scipy import arange
 
 def equilibrium():
     params = decision.Params()
@@ -32,7 +46,7 @@ def equifinality():
     for i in range(repetitions):
         print('run:',i,'from:',repetitions)
         params.numRun = i
-        params.nAgents = random.randint(1,500)
+        params.nAgents = random.randint(1,200)
         decision.run(params)
 
 def multifinality():    
@@ -68,11 +82,11 @@ def singleRun():
 
 def exploreRadius():
     repetitions = 1000
-    radiusValues = arange(1,31)
+    radiusValues = range(1,31)
     numRuns = repetitions*len(radiusValues)
     numRun = 0
     for i in radiusValues:
-        for j in arange(repetitions):
+        for j in range(repetitions):
             params = decision.Params()
             params.oneFile = False 
             params.nSteps = 5001
@@ -90,7 +104,7 @@ def exploreRadius():
             numRun += 1
 
 def main():
-    singleRun()
+    equifinality()
 
 if __name__ == "__main__":
     main()

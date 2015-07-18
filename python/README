@@ -1,6 +1,6 @@
 
-Python code for the models of social learning ('socialLearning.py') and decision making ('decision.py')
-Different experiments, including the ones shown in the paper, can be explored from 'experimentSocialLearning.py' and 'experimentDecision.py'.
+Python code for the models of cultural transmission ('transmission.py') and decision making ('decision.py')
+Different experiments, including the ones shown in the paper, can be explored from 'experimentTransmission.py' and 'experimentDecision.py'.
 To run a experiment execute from command line one of the experiment files (they will generate a CSV file with the output). If a different experiment wants to be executed change the process called from the 'main' function from 'singleRun' to one of the available ones.
 
 

@@ -300,21 +300,23 @@ public class Agent {
 	 
 	 /**
 	  * Simple reproduction based on using energy.
-	  * The agent uses 1/2 their energy to reproduce and give the new agent 1/2 their energy.
+	  * The agent uses 1/2 their energy to reproduce and gives the new agent 1/2 their energy.
 	  */
 	 public void reproduce(){
-		
+			
 		 //here another agent is created then half the energy is given to that agent and the other half is kept by the agent reproducing
 		 Agent agent = new Agent(this.space,this.grid);
 		 agent.tickBorn=RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
-		 this.energy=this.maxEnergy*0.5;
-		 Context context =RunState.getSafeMasterContext();
+		 agent.energy=this.energy*0.5;
+		 this.energy=this.energy*0.5;
+		 Context context=RunState.getSafeMasterContext();
 		 context.add(agent);
 		
 		 //the agent goes to the parent's location
 		 space.moveTo(agent,space.getLocation(this).getX(),space.getLocation(this).getY());
 		 grid.moveTo(agent, grid.getLocation(this).getX(),grid.getLocation(this).getY());
 	 }
+
 	 
 	 /**
 	  * Energy spent at each tick.

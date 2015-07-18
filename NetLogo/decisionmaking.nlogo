@@ -1,4 +1,4 @@
-extensions [matrix] ;; load matrix extension to use for agent memtal maps
+extensions [csv] ;; load matrix extension to use for agent memtal maps
 
 ;; define variables
 globals [outFile worldMap] ;; name and path of output csv file, generic mental map used by all agents
@@ -10,7 +10,6 @@ patches-own [resource maxResource] ;; current resources of a patch, maximum reso
 to setup
   ;; set up global values, agents, patches, and world map matrices
   clear-all
-  set outFile "" ;; variable holding name of file to save csv of output
   if timeSteps = "" [set timeSteps 0] ; change empty max tick limit entry into an integer
   setup-patches ;; call procedure to instantiate patches and patch variables of gridded landscape
   create_agents ;; cal procedure to instantiate forager agents and agent variables
@@ -84,7 +83,8 @@ end
 to reproduce
   ;; agent reproduces by cloning if it reaches maxEnergy
   let originalEnergy energy
-    hatch 1 [ ;; agent clones self; offspring moves to another patch
+    hatch 1 [ ;; agent clones self
+      ;move-to one-of search-patches; offspring moves to another patch
       set energy originalEnergy / 2 ;; agent offsprint/clone gets half of original agent energy
     ]
     set energy originalEnergy / 2 ;; reduce agent energy to half original amount (because other half went to offspring)
@@ -95,34 +95,32 @@ to-report search-patches
   let xmax [pxcor] of patch-here + searchRadius
   let xmin [pxcor] of patch-here - searchRadius
   let ymax [pycor] of patch-here + searchRadius
-  let ymin [pycor] of patch-here - searchRadius  
+  let ymin [pycor] of patch-here - searchRadius
   let allNeighbors patches with [pxcor <= xmax and pxcor >= xmin and pycor <= ymax and pycor >= ymin]
   
   ;; Chebechev distance computed for compatibility with other model implementations.
-  ;; an easier method in NetLogo is to use circular radius
-  
-  ;; let allNeighbors (patch-set patches in-radius searchRadius patch-here)
+  ;; An easier method in NetLogo is to use circular radius. For example:
+  ;;      let allNeighbors (patch-set patches in-radius searchRadius patch-here)
   
   report allNeighbors
-
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
 470
 25
-930
-506
+975
+551
 -1
 -1
-15.0
+16.5
 1
 10
 1
 1
 1
 0
-0
-0
+1
+1
 1
 0
 29
@@ -142,8 +140,8 @@ SLIDER
 nAgents
 nAgents
 1
-100
-10
+200
+50
 1
 1
 NIL
@@ -209,7 +207,7 @@ INPUTBOX
 310
 165
 timeSteps
-1000
+5000
 1
 0
 Number
@@ -222,7 +220,7 @@ SLIDER
 maxEnergy
 maxEnergy
 1
-100
+200
 100
 1
 1
@@ -237,7 +235,7 @@ SLIDER
 energyCost
 energyCost
 1
-20
+30
 25
 1
 1
@@ -252,7 +250,7 @@ SLIDER
 resourceGrowthRate
 resourceGrowthRate
 1
-10
+30
 25
 1
 1
@@ -286,7 +284,7 @@ searchRadius
 searchRadius
 1
 50
-1
+5
 1
 1
 NIL
@@ -303,30 +301,73 @@ count agents
 1
 11
 
+BUTTON
+395
+65
+458
+98
+step
+go
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+This models exemplifies simple decision-making in searching for and acquiring resources in small scale, hunter-gather societies. It is one of two models that accompany the paper:
+
+Rubio-Campillo, Xavier, Mark Altaweel, C. Michael Barton, and Enrico R. Crema (in press) Understanding Small-Scale Societies with Agent-Based Models: Theoretical Examples of Cultural Transmission and Decision-Making. Ecology and Society
+
+For the paper, both models have been coded in four popular platforms: NetLogo (here), Repast, R, and Python. 
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+This is a simple model where agents search for the most productive resource patch within a neighborhood, whose size can be set by the user with the 'searchRadius' slider. Agents then move to that patch and attempt to consume the resources on the patch.
+
+INITIALIZATION
+
+An environment is created in which the maximum possible amount of resources that can grow on each patch is a random number between 0 and 100. Whenever resources are consumed from a patch, they regrow at a rate for each model tick determined by the user ('resourceGrowthRate' slider), up to the maximum allowed for that patch.
+
+A number of agents set by the user ('nAgents' slider) are initialized with 50% of their maximum possible energy, set by the user with the 'maxEnergy' slider. Living and seeking resources cost each agent an amount of energy each model tick that is set by the user with the 'energyCost' slider.
+
+MODELING RUNNING
+
+Each model tick, agents identify the most productive patch in their neighborhood, move to that patch, and attempt to consume resources from the patch. An agent will attempt to consume all the energy it 'needs'. Energy need is the difference between an agent's current energy level and the maxEnergy value set by the user at initialization. If the amount of resources on a patch is less than the energy need, an agent will consume all resouces on that patch. 
+ 
+Importantly, all agents identify the most productive patch and then move to it before any agent consumes resources. After all agents move to selected patches, then agents consume resources. The order in which agents consume resources is randomized each model tick. Thus, if more than one agent occupies the same patch, the agent that consumes first gets the most resources. 
+
+After consuming resources, if an agent has reached its maxEnergy level, it will reproduce by cloning itself. The original agent and the offspring will each receive half of the original agent's energy. For example, if maxEnergy is set to 100, an agent that consumes sufficient resources to reach an energy level of 100 will reproduce. The agent and its offspring will each have energy levels of 50 after reproduction. 
+
+After attempting to reproduce, successfully or not, each agent will then lose energy equal to energyCost. If energyCost=25 and maxEnergy=100, an agent that has reproduced will end up with 100/2 = 50 - 25 = 25 final energy points. An offspring agent does not move, consume, or incur an energyCost at birth.
+
+If the energy level of an agent declines to 0, the agent dies. 
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+Set the parameters described above. Press the 'Setup' button to initialize the environment and place the agents in the environment. Press the 'Run' button, Pressing the 'Step' button will advance the model one tick. The timeSteps entry field allows the user to stop the model running after a predetermined number of ticks. Setting this field to 0 allows the model to run indefinitely, until the user presses 'Go' again. 
 
 ## THINGS TO NOTICE
 
-(suggested things for the user to notice while running the model)
+The number of agents will often climb rapidly, decline rapidly, then stablize at a 'carrying capacity' number. 
 
 ## THINGS TO TRY
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
+Watch the relationship between the number of agents that survive (carrying capacity) and the size of the neighborhood defined by searchRadius.
 
 ## EXTENDING THE MODEL
 
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
+The searchRadius defines a Chebychev 'square' neighborhood. Try changing this to a circular neighborhood. See comments in the search-patches procedure.
+
+As coded, all agents seek the best patch and move to it. Then all agents consume, reproduce, spend energy, and possibly die. This causes agents to potentially compete for resources on the same patch.
+
+Move the "seek-resources" call so that each agent in turn seeks the best patch, consumes, reproduces, spends energy, and possibly dies. In this way, each agent will assessessment of the best patch will be determined in part by other agents' behavior.
 
 ## NETLOGO FEATURES
 
@@ -334,11 +375,13 @@ count agents
 
 ## RELATED MODELS
 
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+As part of the package that contains this published model, there are versions of the same model coded in Repast, Python, and R. There is also a related model of information transmission, also coded in NetLogo, Repast, Python, and R.
+
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+(c) C. Michael Barton, Arizona State University
+This model is licenced under the GNU General Public License v. 3
 @#$#@#$#@
 default
 true
@@ -747,6 +790,113 @@ NetLogo 5.2.0
     <enumeratedValueSet variable="searchRadius">
       <value value="1"/>
     </enumeratedValueSet>
+  </experiment>
+  <experiment name="decision-making_experiment6.1" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks</metric>
+    <metric>count agents</metric>
+    <metric>mean [energy] of agents</metric>
+    <enumeratedValueSet variable="maxEnergy">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="resourceGrowthRate">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="energyCost">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="timeSteps">
+      <value value="1000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nAgents">
+      <value value="10"/>
+      <value value="50"/>
+      <value value="100"/>
+      <value value="150"/>
+      <value value="200"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="searchRadius">
+      <value value="1"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="decisionmaking_experiment6" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks</metric>
+    <metric>count agents</metric>
+    <metric>mean [energy] of agents</metric>
+    <enumeratedValueSet variable="maxEnergy">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="resourceGrowthRate">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="energyCost">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="timeSteps">
+      <value value="1000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nAgents">
+      <value value="1"/>
+      <value value="5"/>
+      <value value="10"/>
+      <value value="15"/>
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="searchRadius">
+      <value value="1"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="decisionmaking_experiment6plus" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks</metric>
+    <metric>count agents</metric>
+    <metric>mean [energy] of agents</metric>
+    <enumeratedValueSet variable="maxEnergy">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="resourceGrowthRate">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="energyCost">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="timeSteps">
+      <value value="1000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nAgents">
+      <value value="30"/>
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="searchRadius">
+      <value value="1"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="decisionmaking_experiment_forpaper" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <metric>ticks</metric>
+    <metric>count agents</metric>
+    <metric>mean [energy] of agents</metric>
+    <enumeratedValueSet variable="maxEnergy">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="resourceGrowthRate">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="energyCost">
+      <value value="25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="timeSteps">
+      <value value="5000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nAgents">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="searchRadius" first="1" step="1" last="30"/>
   </experiment>
 </experiments>
 @#$#@#$#@

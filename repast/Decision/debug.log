@@ -1,0 +1,37 @@
+INFO  [AWT-EventQueue-0] 2015-07-13 06:59:08,798 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/Desktop/otherAgent/abm4s3/repast/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-07-13 06:59:08,933 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/Desktop/otherAgent/abm4s3/repast/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2015-07-13 06:59:16,639 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost5972900251616734833.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767154081 ...
+INFO  [SwingWorker-pool-1-thread-1] 2015-07-13 06:59:16,809 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2015-07-13 06:59:16,810 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0455
+INFO  [SwingWorker-pool-1-thread-1] 2015-07-13 06:59:16,811 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767154081/maltaweel_localhost5972900251616734833.zip
+INFO  [SwingWorker-pool-1-thread-1] 2015-07-13 06:59:17,268 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [AWT-EventQueue-0] 2015-07-13 06:59:19,178 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/maltaweel/Desktop/otherAgent/abm4s3/repast/Decision/output/config.props
+INFO  [AWT-EventQueue-0] 2015-07-13 06:59:19,181 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/maltaweel/Desktop/otherAgent/abm4s3/repast/Decision/batch/batch_params.xml to
+	/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 06:59:25,860 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/maltaweel_localhost7932837648054088333.zip to 
+/var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144 ...
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 06:59:26,071 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 06:59:26,072 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0488
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 06:59:26,072 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144/maltaweel_localhost7932837648054088333.zip
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 06:59:26,649 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [pool-2-thread-1] 2015-07-13 07:00:17,274 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767154081 for DONE:  no
+INFO  [pool-3-thread-1] 2015-07-13 07:00:26,714 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144 for DONE:  no
+INFO  [pool-2-thread-1] 2015-07-13 07:01:17,276 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767154081 for DONE:  no
+INFO  [pool-3-thread-1] 2015-07-13 07:01:26,716 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144 for DONE:  no
+INFO  [pool-2-thread-1] 2015-07-13 07:02:17,278 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767154081 for DONE:  no
+INFO  [pool-3-thread-1] 2015-07-13 07:02:26,718 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,719 repast.simphony.batch.ssh.SessionsDriver - Run Time: 3.0108
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,738 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144
+WARN  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,750 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}.Decision/output/CellOutput*.batch_param_map.csv in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144/instance_1
+WARN  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,750 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}.Decision/output/CellOutput*.csv in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144/instance_1
+WARN  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,750 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}ModelOutput*.batch_param_map.txt in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144/instance_1
+WARN  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,750 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}ModelOutput*.txt in /var/folders/wk/s3k68kns7mqcfrllyntxwj4m0000gn/T/simphony_model_1436767163144/instance_1
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,750 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/maltaweel/Desktop/otherAgent/abm4s3/repast/Decision/output
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,795 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0012
+INFO  [SwingWorker-pool-1-thread-2] 2015-07-13 07:02:26,795 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 3.0611
