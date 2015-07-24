@@ -17,12 +17,6 @@
 
 import random, math
 
-def enum(**enums):
-    """ converts a sequence of values to an C++ style enum """
-    return type('Enum', (), enums)
-
-DecisionType = enum(eGreedy=0, eProb=1)    
-
 class Position:
     def __init__(self, x, y):
         self.x = x
