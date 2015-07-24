@@ -1,6 +1,5 @@
 ###############################################################
 ## ~Decision Making Model~
-## by enrico.crema@gmail.com                                       
 ##                                        
 ## Parameters:                                       
 ## dimX ::: x limit of the world (note that this will be the rows in the resource matrix)
@@ -16,7 +15,6 @@
 
 
 
-##nAgents=10;energyCost=25;maxEnergy=100;resourceGrowthRate=25;nSteps=100;dimX=30;dimY=30;plot=FALSE;verbose=FALSE
 
 main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=25,
                nSteps=100,dimX=30,dimY=30,

@@ -1,6 +1,5 @@
 ###############################################################
 ## ~Cultural Transmission Model~
-## by enrico.crema@gmail.com                                       
 ##     
 ## Parameters:  
 ## nAgents ::: Number of Agents
