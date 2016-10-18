@@ -1,4 +1,2 @@
 # abm4s3
-Examples of Agent-Based Models to study Small Scale Societies
-
-
+Agent-Based Modelling of past societies: Examples Using Multiple Platforms and Languages
